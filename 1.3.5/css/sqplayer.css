@@ -1,0 +1,75 @@
+/* ----
+
+# Square Player
+# By: Dreamer-Paul
+# Last Update: 2019.9.29
+
+一个简洁到极致的单曲播放器。
+
+本代码为奇趣保罗原创，并遵守 MIT 开源协议。欢迎访问我的博客：https://paugram.com
+
+---- */
+
+sqp{
+    width: 8em;
+    height: 8em;
+    color: #fff;
+    float: right;
+    display: block;
+    overflow: hidden;
+    user-select: none;
+    position: relative;
+    border-radius: 1em;
+    margin: 0 0 1em 1em;
+    background: #ccc center/cover no-repeat;
+}
+sqp[left]{
+    float: left;
+    margin: 0 1em 1em 0;
+}
+sqp:empty:before{
+    padding: 1em;
+    display: block;
+    font-size: .75em;
+    text-align: center;
+    content: "加载中...";
+}
+
+sqp .sqp-info{
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: .75em 0;
+    font-size: .75em;
+    position: absolute;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .6), rgba(0, 0, 0, .8));
+}
+
+sqp .sqp-title{
+    padding: 0 1em;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+sqp .sqp-toggle{
+    width: 2em;
+    height: 2em;
+    opacity: .8;
+    cursor: pointer;
+    position: relative;
+    border-radius: 66%;
+    display: inline-block;
+    box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+    transform: translate(calc(4em - 50%), 100%);
+    transition: opacity .3s, width .3s, height .3s, transform .3s;
+    background: #fff center/1em no-repeat;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAxMCAxMCI+DQo8cG9seWdvbiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRzPSItNDEuMywyOC41IDIsLTQ2LjUgNDUuMywyOC41ICIvPg0KPHBvbHlnb24gcG9pbnRzPSIyLDEuNSA4LDUgMiw4LjUgIi8+DQo8L3N2Zz4NCg==)
+}
+sqp .sqp-toggle:hover{ opacity: 1 }
+
+sqp .sqp-toggle.pause{
+    width: 1.5em;
+    height: 1.5em;
+    transform: translate(.5em, .5em);
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAxMCAxMCI+DQo8cmVjdCB4PSIyIiB5PSIxIiB3aWR0aD0iMiIgaGVpZ2h0PSI4Ii8+DQo8cmVjdCB4PSI2IiB5PSIxIiB3aWR0aD0iMiIgaGVpZ2h0PSI4Ii8+DQo8L3N2Zz4NCg==);
+}

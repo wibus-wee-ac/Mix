@@ -1,0 +1,177 @@
+
+.comment-children ol.comment-list .line, .comment-children ul.comment-list .line {
+    position: absolute;
+    width: 2px;
+    height: 5.6rem;
+    top: -5rem;
+    background-color: #e1e1e1;
+    left: 1.5rem;
+    z-index: -1;
+
+}
+
+.comment_reply {
+    position: absolute;
+    right: .5rem;
+    top: .3rem;
+}
+
+.comment_meta {
+    margin-bottom: .3rem;
+    position: relative;
+}
+
+.comment-list {
+    margin-top: 3rem
+}
+
+.comment-list ol {
+    list-style: none
+}
+
+.comment-list li {
+    list-style: none
+}
+
+.comment-list img.avatar {
+    border-radius: 50%;
+    margin: .5rem 2rem 0 0;
+    height: 3rem;
+    width: 3rem
+}
+
+.comment_main {
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    padding: 10px;
+    transition: box-shadow .5s ease;
+    flex: 1;
+}
+
+.comment_main:hover {
+    box-shadow: 0 .625em 3.75em 0 #f4f4f4
+}
+
+.comment-list::after {
+    content: '';
+    clear: both
+}
+
+.comment-list [id*=li-comment-]::after {
+    content: '';
+    clear: both
+}
+
+.post-form.active {
+    z-index: 1
+}
+
+.comment-list [id*=li-comment-] {
+    margin-bottom: 3rem;
+    position: relative
+}
+
+[id*=comment-] .comment_meta span {
+    margin-right: 2rem
+}
+
+[id*=comment-] {
+    position: relative;
+}
+
+.comment_time {
+    color: #a1a1a1;
+}
+
+.comments-body {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.reply_form {
+    margin-top: .5rem
+}
+
+.reply_form p:nth-child(1) a {
+    margin-right: 2rem
+}
+
+.reply_form .submit {
+    position: relative;
+    margin-top: 1rem;
+    overflow: hidden
+}
+
+.reply_form .submit button {
+    float: right
+}
+
+@media (max-width: 600px) {
+    .comment-list img.avatar {
+        margin-right: .3rem;
+    }
+
+    [id*=comment-] .comment_meta span {
+        margin-right: .3rem;
+    }
+}
+
+.reply_form div.col-3 {
+    column-count: 3;
+    margin-bottom: .5rem
+}
+
+.reply_form div > input[type=text] {
+    display: block;
+    width: 1000px
+}
+
+post-form {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    opacity: 0;
+    width: 22em;
+    overflow: auto;
+    padding: 1.5em;
+    max-width: 100%;
+    background: #fff;
+    transform: translateX(100%);
+    border-left: currentColor dotted 2px;
+    transition: transform .3s, opacity .3s
+}
+
+.post-form.active {
+    opacity: 1;
+    transform: translateX(0)
+}
+
+.post-form .fa {
+    margin-right: .5em
+}
+
+.post-form input, .post-form select, .post-form textarea {
+    width: 100%;
+    border: none;
+    padding: 1em;
+    border-radius: 0;
+    margin-bottom: 1em;
+    background: #fafafa
+}
+
+.post-form .add {
+    margin-bottom: 1em
+}
+
+.post-form .add label {
+    float: left;
+    cursor: pointer
+}
+
+.post-form .add i {
+    font-size: 1.3em;
+    margin-right: .75em;
+    vertical-align: middle
+}
