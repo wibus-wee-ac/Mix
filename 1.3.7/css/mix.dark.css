@@ -31,3 +31,6 @@ html.dark pre[class*="language-"]>code {
 html.dark .torTree *{
     color: white;
 }
+html.dark #headnav-a{
+    color: var(--brown);
+}
