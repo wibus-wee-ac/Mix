@@ -915,11 +915,11 @@ EOF;
 
 
         if (trim($itemClass) !== "") {
-            $ret = ' <div class="has-child"><a ' . $linkStatus . ' href="' . $itemLink . '"><i class="'
+            $ret = ' <div class="has-child"><a ' . $linkStatus . ' href="' . $itemLink . '" rel="noreferrer"><i class="'
                 . $itemClass . '"></i><span>' . $itemName . '</span></a>' . $subListHtml . '</div>';
         }
         if ($ISsub != 'no') {
-            $ret = ' <a ' . $linkStatus . ' href="' . $itemLink . '"><i class="'
+            $ret = ' <a ' . $linkStatus . ' href="' . $itemLink . '" rel="noreferrer"><i class="'
             . $itemClass . '"></i><span>' . $itemName . '</span></a>';
         }
         // <li> <a target="_self" href="xxx.com" class="auto" data-pjax-state=""><span class="nav-icon"><i data-feather="music"></i></span><span>网易云音乐</span></a></li>
