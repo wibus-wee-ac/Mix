@@ -3,12 +3,12 @@ class Backup{
     function echoBackup(){
         $hosturl = $_SERVER['HTTP_HOST'];
         $check_host = 'https://api.iucky.cn/plugins/update/Mix.php';
-        $check_message = $check_host . '?a=V1.4.0&u=' . $_SERVER['HTTP_HOST'];
+        $check_message = $check_host . '?a=V1.4.1&u=' . $_SERVER['HTTP_HOST'];
         $message_json = file_get_contents($check_message);
         $json_W = json_decode($message_json);
         $version = $json_W->{'version'};
         $message = $json_W->{'message'};
-        $m_ver = '1.4.0';
+        $m_ver = '1.4.1';
         if (!$_POST) {
             echo ' 
             <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
