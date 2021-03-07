@@ -56,54 +56,88 @@
     transform: translateY(-50%);
     padding: 6px;
 }
-.Header_drawer__iQn1p.Header_show__3R4Sq {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-}
-.Header_drawer__iQn1p {
-    background-color: var(--light-bg);
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 90;
-    padding: 1.5rem;
-    color: var(--light-brown);
-    -webkit-transition-property: -webkit-transform;
-    transition-property: -webkit-transform;
-    transition-property: transform;
-    transition-property: transform,-webkit-transform;
-    -webkit-transition-timing-function: cubic-bezier(.4,0,.2,1);
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
-    -webkit-transition-duration: .15s;
-    transition-duration: .15s;
-    -webkit-transition-duration: .3s;
-    transition-duration: .3s;
-    width: 300px;
-    max-width: 80vw;
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-}
-.text-right {
-    text-align: right;
-}
-.pb-4 {
-    padding-bottom: 1rem;
-}
-.Header_link-section__1JFc9 {
-    margin-bottom: 1rem;
-}
-.Header_drawer__iQn1p .Header_parent__3EA6A {
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-}
-.Header_drawer__iQn1p .Header_children-wrapper__1z9Ni {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.no_none{
-    display: none;
-}
+        .Header_drawer__iQn1p.Header_show__3R4Sq {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        .Header_drawer__iQn1p {
+            background-color: #fff !important;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 90;
+            padding: 1.5rem;
+            color: var(--light-brown);
+            -webkit-transition-property: -webkit-transform;
+            transition-property: -webkit-transform;
+            transition-property: transform;
+            transition-property: transform, -webkit-transform;
+            -webkit-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+            transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+            -webkit-transition-duration: .15s;
+            transition-duration: .15s;
+            -webkit-transition-duration: .3s;
+            transition-duration: .3s;
+            width: 300px;
+            max-width: 80vw;
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+        }
+        .Header_drawer__iQn1p .Header_children-wrapper__1z9Ni {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .text-right {
+            text-align: right;
+        }
+        .Header_link-section__1JFc9 {
+            margin-bottom: 1rem;
+        }
+        .pb-4 {
+            padding-bottom: 2rem;
+        }
+
+        body * {
+            -webkit-transition: color .1s ease-in, background .1s ease-in, border .1s ease-in;
+            transition: color .1s ease-in, background .1s ease-in, border .1s ease-in;
+        }
+
+        .Header_drawer__iQn1p .Header_children__2ZydX,
+        .Header_drawer__iQn1p .Header_parent__3EA6A {
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+        }
+
+        .Header_drawer__iQn1p .Header_parent__3EA6A {
+            font-weight: 500;
+            font-size: 1.25rem;
+            line-height: 2rem;
+        }
+
+        .Header_drawer__iQn1p a {
+            color: inherit;
+        }
+        .Header_drawer__iQn1p svg {
+            margin-right: 1rem;
+        }
+        .Overlay_container__1owmA {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 5;
+        }
+        .Overlay_container__1owmA .Overlay_overlay__2YOqK {
+            position: absolute;
+            top: -20px;
+            bottom: -20px;
+            right: -20px;
+            left: -20px;
+            z-index: -1;
+            background-color: rgba(0,0,0,.3);
+        }
 </style>
 <header class="assets" id="header">
     <div class="jsx-685620294 head-btn" id="btn_active" style="display: flex; align-items: center; justify-content: center; padding: 1em; cursor: pointer;"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="list-ul" class="svg-inline--fa fa-list-ul fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M48 48a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm0 160a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm0 160a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm448 16H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"></path></svg></div>
@@ -190,7 +224,5 @@
               <?php echo @$headnavItemsOutput;?>
           </nav>
         </div>
-        
-      <div id="headerr" class="Header_drawer__iQn1p global-drawer"><div id="close" class="pb-4 text-right"><span class="p-4 inline-block -mr-5 -mt-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg></span></div><div class="Header_link-section__1JFc9 global-link-section"><a href="/"><div class="Header_parent__3EA6A global-parent"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="dot-circle" class="svg-inline--fa fa-dot-circle fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"></path></svg><span>源</span></div></a><div class="Header_children-wrapper__1z9Ni global-children-wrapper"><a href="/about"><div class="Header_children__2ZydX global-children"><span>关于</span></div></a><a href="/message"><div class="Header_children__2ZydX global-children"><span>留言</span></div></a><a href="/stack"><div class="Header_children__2ZydX global-children"><span>学习成果</span></div></a><a href="/thanks"><div class="Header_children__2ZydX global-children"><span>感谢信</span></div></a></div></div><div class="Header_link-section__1JFc9 global-link-section"><a href="/posts"><div class="Header_parent__3EA6A global-parent"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="glasses" class="svg-inline--fa fa-glasses fa-w-18 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M574.1 280.37L528.75 98.66c-5.91-23.7-21.59-44.05-43-55.81-21.44-11.73-46.97-14.11-70.19-6.33l-15.25 5.08c-8.39 2.79-12.92 11.86-10.12 20.24l5.06 15.18c2.79 8.38 11.85 12.91 20.23 10.12l13.18-4.39c10.87-3.62 23-3.57 33.16 1.73 10.29 5.37 17.57 14.56 20.37 25.82l38.46 153.82c-22.19-6.81-49.79-12.46-81.2-12.46-34.77 0-73.98 7.02-114.85 26.74h-73.18c-40.87-19.74-80.08-26.75-114.86-26.75-31.42 0-59.02 5.65-81.21 12.46l38.46-153.83c2.79-11.25 10.09-20.45 20.38-25.81 10.16-5.3 22.28-5.35 33.15-1.73l13.17 4.39c8.38 2.79 17.44-1.74 20.23-10.12l5.06-15.18c2.8-8.38-1.73-17.45-10.12-20.24l-15.25-5.08c-23.22-7.78-48.75-5.41-70.19 6.33-21.41 11.77-37.09 32.11-43 55.8L1.9 280.37A64.218 64.218 0 0 0 0 295.86v70.25C0 429.01 51.58 480 115.2 480h37.12c60.28 0 110.37-45.94 114.88-105.37l2.93-38.63h35.75l2.93 38.63C313.31 434.06 363.4 480 423.68 480h37.12c63.62 0 115.2-50.99 115.2-113.88v-70.25c0-5.23-.64-10.43-1.9-15.5zm-370.72 89.42c-1.97 25.91-24.4 46.21-51.06 46.21H115.2C86.97 416 64 393.62 64 366.11v-37.54c18.12-6.49 43.42-12.92 72.58-12.92 23.86 0 47.26 4.33 69.93 12.92l-3.13 41.22zM512 366.12c0 27.51-22.97 49.88-51.2 49.88h-37.12c-26.67 0-49.1-20.3-51.06-46.21l-3.13-41.22c22.67-8.59 46.08-12.92 69.95-12.92 29.12 0 54.43 6.44 72.55 12.93v37.54z"></path></svg><span>文</span></div></a><div class="Header_children-wrapper__1z9Ni global-children-wrapper"><a href="/category/code"><div class="Header_children__2ZydX global-children"><span>编程</span></div></a><a href="/category/play"><div class="Header_children__2ZydX global-children"><span>折腾</span></div></a><a href="/category/learn"><div class="Header_children__2ZydX global-children"><span>学习</span></div></a><a href="/category/things"><div class="Header_children__2ZydX global-children"><span>事件日志</span></div></a><a href="/category/works"><div class="Header_children__2ZydX global-children"><span>作品</span></div></a></div></div><div class="Header_link-section__1JFc9 global-link-section"><a href="/notes"><div class="Header_parent__3EA6A global-parent"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="feather-alt" class="svg-inline--fa fa-feather-alt fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M512 0C460.22 3.56 96.44 38.2 71.01 287.61c-3.09 26.66-4.84 53.44-5.99 80.24l178.87-178.69c6.25-6.25 16.4-6.25 22.65 0s6.25 16.38 0 22.63L7.04 471.03c-9.38 9.37-9.38 24.57 0 33.94 9.38 9.37 24.59 9.37 33.98 0l57.13-57.07c42.09-.14 84.15-2.53 125.96-7.36 53.48-5.44 97.02-26.47 132.58-56.54H255.74l146.79-48.88c11.25-14.89 21.37-30.71 30.45-47.12h-81.14l106.54-53.21C500.29 132.86 510.19 26.26 512 0z"></path></svg><span>记</span></div></a><div class="Header_children-wrapper__1z9Ni global-children-wrapper"></div></div><div class="Header_link-section__1JFc9 global-link-section"><a href="/says"><div class="Header_parent__3EA6A global-parent"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comments" class="svg-inline--fa fa-comments fa-w-18 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z"></path></svg><span>言</span></div></a><div class="Header_children-wrapper__1z9Ni global-children-wrapper"></div></div><div class="Header_link-section__1JFc9 global-link-section"><a href="/timeline"><div class="Header_parent__3EA6A global-parent"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="history" class="svg-inline--fa fa-history fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 255.531c.253 136.64-111.18 248.372-247.82 248.468-59.015.042-113.223-20.53-155.822-54.911-11.077-8.94-11.905-25.541-1.839-35.607l11.267-11.267c8.609-8.609 22.353-9.551 31.891-1.984C173.062 425.135 212.781 440 256 440c101.705 0 184-82.311 184-184 0-101.705-82.311-184-184-184-48.814 0-93.149 18.969-126.068 49.932l50.754 50.754c10.08 10.08 2.941 27.314-11.313 27.314H24c-8.837 0-16-7.163-16-16V38.627c0-14.254 17.234-21.393 27.314-11.314l49.372 49.372C129.209 34.136 189.552 8 256 8c136.81 0 247.747 110.78 248 247.531zm-180.912 78.784l9.823-12.63c8.138-10.463 6.253-25.542-4.21-33.679L288 256.349V152c0-13.255-10.745-24-24-24h-16c-13.255 0-24 10.745-24 24v135.651l65.409 50.874c10.463 8.137 25.541 6.253 33.679-4.21z"></path></svg><span>览</span></div></a><div class="Header_children-wrapper__1z9Ni global-children-wrapper"><a href="/timeline?type=note"><div class="Header_children__2ZydX global-children"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="feather-alt" class="svg-inline--fa fa-feather-alt fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M512 0C460.22 3.56 96.44 38.2 71.01 287.61c-3.09 26.66-4.84 53.44-5.99 80.24l178.87-178.69c6.25-6.25 16.4-6.25 22.65 0s6.25 16.38 0 22.63L7.04 471.03c-9.38 9.37-9.38 24.57 0 33.94 9.38 9.37 24.59 9.37 33.98 0l57.13-57.07c42.09-.14 84.15-2.53 125.96-7.36 53.48-5.44 97.02-26.47 132.58-56.54H255.74l146.79-48.88c11.25-14.89 21.37-30.71 30.45-47.12h-81.14l106.54-53.21C500.29 132.86 510.19 26.26 512 0z"></path></svg><span>生活</span></div></a><a href="/timeline?type=post"><div class="Header_children__2ZydX global-children"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="book-open" class="svg-inline--fa fa-book-open fa-w-18 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M542.22 32.05c-54.8 3.11-163.72 14.43-230.96 55.59-4.64 2.84-7.27 7.89-7.27 13.17v363.87c0 11.55 12.63 18.85 23.28 13.49 69.18-34.82 169.23-44.32 218.7-46.92 16.89-.89 30.02-14.43 30.02-30.66V62.75c.01-17.71-15.35-31.74-33.77-30.7zM264.73 87.64C197.5 46.48 88.58 35.17 33.78 32.05 15.36 31.01 0 45.04 0 62.75V400.6c0 16.24 13.13 29.78 30.02 30.66 49.49 2.6 149.59 12.11 218.77 46.95 10.62 5.35 23.21-1.94 23.21-13.46V100.63c0-5.29-2.62-10.14-7.27-12.99z"></path></svg><span>博文</span></div></a></div></div><div class="Header_link-section__1JFc9 global-link-section"><a href="/friends"><div class="Header_parent__3EA6A global-parent"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-friends" class="svg-inline--fa fa-user-friends fa-w-20 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M192 256c61.9 0 112-50.1 112-112S253.9 32 192 32 80 82.1 80 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C51.6 288 0 339.6 0 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zM480 256c53 0 96-43 96-96s-43-96-96-96-96 43-96 96 43 96 96 96zm48 32h-3.8c-13.9 4.8-28.6 8-44.2 8s-30.3-3.2-44.2-8H432c-20.4 0-39.2 5.9-55.7 15.4 24.4 26.3 39.7 61.2 39.7 99.8v38.4c0 2.2-.5 4.3-.6 6.4H592c26.5 0 48-21.5 48-48 0-61.9-50.1-112-112-112z"></path></svg><span>友</span></div></a><div class="Header_children-wrapper__1z9Ni global-children-wrapper"></div></div></div>
-      <div id="dark_dark" class="no_none" ><div class="Overlay_container__1owmA" style="opacity: 1;"><div><div class="Overlay_overlay__2YOqK" style="opacity: 1;"></div></div></div></div>
-      </header>
+              </header>
+              

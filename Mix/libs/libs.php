@@ -925,6 +925,63 @@ EOF;
         // <li> <a target="_self" href="xxx.com" class="auto" data-pjax-state=""><span class="nav-icon"><i data-feather="music"></i></span><span>网易云音乐</span></a></li>
         return $ret;
     }
+
+    /**
+     * 解析头部图标
+     * HTML样例代码
+            <div class="Header_link-section__1JFc9 global-link-section">
+
+            <a href="/timeline" data-pjax-state="">
+                <div class="Header_parent__3EA6A global-parent"><i class=""></i><span>览</span></div>
+            </a>
+
+            <div class="Header_children-wrapper__1z9Ni global-children-wrapper">
+
+            <a href="/timeline?type=note"
+                    data-pjax-state="">
+            <div class="Header_children__2ZydX global-children"><i class=""></i><span>生活</span></div>
+            </a>
+
+            <a href="/timeline?type=post" data-pjax-state="">
+                    <div class="Header_children__2ZydX global-children"><i class=""></i><span>博文</span></div>
+            </a>
+            </div>
+
+            </div>
+     */
+    public static function returnHeadSideItem($headnavItem, $haveSub, $subListHtml, $ISsub = 'no')
+    {
+
+        $ret = "";
+        @$itemName = $headnavItem->name;
+        @$itemStatus = $headnavItem->status;
+        @$itemLink = $headnavItem->link;
+        @$itemClass = $headnavItem->class;
+        @$itemFeather = $headnavItem->feather;
+        @$itemSub = $headnavItem->sub;
+        @$itemTarget = $headnavItem->target;
+
+
+        if (@$itemTarget) {
+            $linkStatus = 'target="' . $itemTarget . '"';
+        } else {
+            $linkStatus = 'target="_self"';
+        }
+
+
+
+        if (trim($itemClass) !== "") {
+            $ret = '<a ' . $linkStatus . ' href="' . $itemLink . '" rel="noreferrer"><div class="Header_parent__3EA6A global-parent"><i class="'
+            . $itemClass . '"></i><span>' . $itemName . '</span></div></a>';
+        }
+        if ($ISsub != 'no') { //如果是小分支，children，覆盖上面的内容
+            $ret = '<a ' . $linkStatus . ' href="' . $itemLink . '" rel="noreferrer"><div class="Header_children__2ZydX global-children"><i class="'
+            . $itemClass . '"></i><span>' . $itemName . '</span></a>';
+        }
+        // <li> <a target="_self" href="xxx.com" class="auto" data-pjax-state=""><span class="nav-icon"><i data-feather="music"></i></span><span>网易云音乐</span></a></li>
+        return $ret;
+    }
+
     /*
      * 解析语录页
      * Author：Wibus
