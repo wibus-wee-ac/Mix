@@ -29,12 +29,23 @@ ks.image("img");
   body, nav#Header_head-menu__ofiV5 {
     background: url(<?php $this->options->BackGroundImage() ?>) top fixed!important;
   }
+  @media all and (max-width:600px){
+    nav#Header_head-menu__ofiV5 {
+      background: url(<?php $this->options->BackGroundImage() ?>) top fixed!important;
+    }
+  }
+
   </style>
   <?php endif;?>
   <?php if($this->options->BackGroundImageDark):?>
   <style>
   html.dark body, html.dark nav#Header_head-menu__ofiV5 {
     background: url(<?php $this->options->BackGroundImageDark() ?>) top fixed!important;
+  }
+  @media all and (max-width:600px){
+    html.dark nav#Header_head-menu__ofiV5 {
+      background: url(<?php $this->options->BackGroundImageDark() ?>) top fixed!important;
+    }
   }
   </style>
   <?php endif;?>
