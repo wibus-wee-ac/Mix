@@ -96,3 +96,6 @@
         ?>
         <?php echo @$headnavItemsOutput;?>
     </div>
+    </div>
+    </div>
+    </div>

@@ -105,8 +105,8 @@ function themeConfig($form) {
         '2'=> '2.0 样式'
     ),'2', _t('头部导航栏使用的样式'), NULL);
     $form->addInput($headNavStyle);
-    //顶部导航栏图标1.0
-    $HeadNavPhoto = new Typecho_Widget_Helper_Form_Element_Textarea('HeadNavPhoto', NULL, _t(''), _t('顶部导航栏图标配置（1.0样式）'), _t('此处填写HTML代码，可不填写'));
+    //顶部导航栏图标
+    $HeadNavPhoto = new Typecho_Widget_Helper_Form_Element_Textarea('HeadNavPhoto', NULL, _t(''), _t('顶部左侧图片配置'), _t('此处填写HTML代码，可不填写'));
     $form->addInput($HeadNavPhoto);
     //顶部导航自定义2.0
     $headnavItems = new Typecho_Widget_Helper_Form_Element_Textarea('headnavItems', NULL, NULL, _t('顶部导航配置（2.0样式）'), '<span style="color:red;">如果不明白此项，请清空该项，可不填写</span>');
