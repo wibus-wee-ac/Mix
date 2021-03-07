@@ -2942,16 +2942,25 @@ html.light img {
 }
 
 html.dark {
-	color: #ddd!important;
-	--red: #ad1a00!important;
-	--blue: #1346a4!important;
-	--green: #1f8f93!important;
-	--yellow: #806000!important;
-	--brown: #c6aa9f!important;
-	--light-brown: #bc9c8f!important;
-	--purple: #561494!important;
-	--light-bg: #111!important;
-	--light-font: #ddd!important
+    --black: #fff;
+    --shizuku-background-color: #21212;
+    --shizuku-text-color: #858585;
+    --shizuku-theme-color: #3c946c;
+    --gray: #666;
+    --bg-opacity: rgba(17,17,17,0.5);
+}
+html.dark {
+    color: #ddd!important;
+    --red: #ad1a00!important;
+    --blue: #1346a4!important;
+    --green: #1f8f93!important;
+    --yellow: #806000!important;
+    --brown: #c6aa9f!important;
+    --light-brown: #bc9c8f!important;
+    --purple: #561494!important;
+    --light-bg: #111!important;
+    --light-font: #ddd!important;
+    --shallow: #333!important;
 }
 
 html.dark body, html.dark nav#Header_head-menu__ofiV5 {
@@ -5592,7 +5601,7 @@ template {
 	transform: translateX(0);
 }
 .Header_drawer__iQn1p {
-	background-color: #fff !important;
+	background-color: var(--light-bg);
 	position: fixed;
 	top: 0;
 	right: 0;
