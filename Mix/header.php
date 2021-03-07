@@ -41,6 +41,16 @@ ks.image("img");
   </style>
   <?php endif;?>
   <?php $this->header(); ?>
+  <script>
+    window.MIX_CONFIG = {
+      VERSION: '1.4.1',
+      <?php if ($this->options->sideBarStyle == 1):?>
+      SIDEBAR: 1,
+      <?php elseif ($this->options->sideBarStyle == 2):?>
+      SIDEBAR: 2,
+      <?php endif;?>
+    }
+  </script>
   </head>
 <body class="loading">
 <?php $this->options->HeaderHTML(); ?>

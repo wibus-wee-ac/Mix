@@ -17,37 +17,39 @@ function FontZoom(size){
 
 // 原生js编写技术
 //1.0下拉菜单
-document.getElementById("btn_active").onclick = function(){
-    name1 = document.getElementById("header").className;
-    if(name1 == 'assets'){
-        document.getElementById('header').className = 'assets active';
-    }else{
-        document.getElementById('header').className = 'assets';
+if(window.MIX_CONFIG.SIDEBAR == 1){
+    document.getElementById("btn_active").onclick = function(){
+        name1 = document.getElementById("header").className;
+        if(name1 == 'assets'){
+            document.getElementById('header').className = 'assets active';
+        }else{
+            document.getElementById('header').className = 'assets';
+        }
     }
-}
-document.getElementById("Header_head-menu__ofiV5").onclick = function(){
-    name1 = document.getElementById("header").className;
-    if(name1 != 'assets'){
-        document.getElementById('header').className = 'assets';
+    document.getElementById("Header_head-menu__ofiV5").onclick = function(){
+        name1 = document.getElementById("header").className;
+        if(name1 != 'assets'){
+            document.getElementById('header').className = 'assets';
+        }
     }
-}
+}else if(window.MIX_CONFIG.SIDEBAR == 2){
 //2.0右侧展开菜单
-document.getElementById("btn_sidebar").onclick = function(){
-    if(document.getElementById("headerr").className == 'Header_drawer__iQn1p global-drawer'){
-        document.getElementById('headerr').className = 'Header_drawer__iQn1p global-drawer Header_show__3R4Sq global-show';
+    document.getElementById("btn_sidebar").onclick = function(){
+        if(document.getElementById("headerr").className == 'Header_drawer__iQn1p global-drawer'){
+            document.getElementById('headerr').className = 'Header_drawer__iQn1p global-drawer Header_show__3R4Sq global-show';
+        }
+    }
+    document.getElementById("close").onclick = function(){
+        if(document.getElementById("headerr").className == 'Header_drawer__iQn1p global-drawer Header_show__3R4Sq global-show'){
+            document.getElementById('headerr').className = 'Header_drawer__iQn1p global-drawer';
+        }
+    }
+    document.getElementById("headerr").onclick = function(){
+        if(document.getElementById("headerr").className == 'Header_drawer__iQn1p global-drawer Header_show__3R4Sq global-show'){
+            document.getElementById('headerr').className = 'Header_drawer__iQn1p global-drawer';
+        }
     }
 }
-document.getElementById("close").onclick = function(){
-    if(document.getElementById("headerr").className == 'Header_drawer__iQn1p global-drawer Header_show__3R4Sq global-show'){
-        document.getElementById('headerr').className = 'Header_drawer__iQn1p global-drawer';
-    }
-}
-document.getElementById("headerr").onclick = function(){
-    if(document.getElementById("headerr").className == 'Header_drawer__iQn1p global-drawer Header_show__3R4Sq global-show'){
-        document.getElementById('headerr').className = 'Header_drawer__iQn1p global-drawer';
-    }
-}
-
 /**
  * 回到顶部 按钮
  * 绑定回到顶部动画
