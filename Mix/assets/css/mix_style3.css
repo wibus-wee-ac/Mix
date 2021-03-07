@@ -1,8 +1,8 @@
 @media all and (max-width:600px){
     html.dark nav#Header_head-menu__ofiV5 {
-        background: #000 url(https://gitee.com/xun7788/my-imagination/raw/master/cdn/background-night.png) top fixed!important
+        background: url(https://gitee.com/xun7788/my-imagination/raw/master/cdn/background-night.png) top fixed!important
     }
     nav#Header_head-menu__ofiV5 {
-        background: #000 url(https://gitee.com/xun7788/my-imagination/raw/master/cdn/background-night.png) top fixed
+        background: url(https://gitee.com/xun7788/my-imagination/raw/master/cdn/background-night.png) top fixed
     }
   }

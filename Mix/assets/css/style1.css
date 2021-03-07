@@ -1,3 +1,12 @@
+@media all and (max-width:600px){
+    html.dark nav#Header_head-menu__ofiV5 {
+        background: url(https://gitee.com/xun7788/my-imagination/raw/master/cdn/background-night.png) top fixed!important
+    }
+    nav#Header_head-menu__ofiV5 {
+        background: url(https://gitee.com/xun7788/my-imagination/raw/master/cdn/background-night.png) top fixed
+    }
+}
+
 .Message_wrap__3GJT3 {
 	display: block;
 	margin: 12px auto;
