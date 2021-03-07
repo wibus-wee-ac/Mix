@@ -7,7 +7,7 @@
   }
 }
 @media all and (min-width:600px){
-    #btn_active{ display: none!important;}
+    #btn_active, #btn_sidebar{ display: none!important;}
 
 }
 #headnav-a{
