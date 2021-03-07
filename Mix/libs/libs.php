@@ -922,7 +922,7 @@ EOF;
             $ret = ' <a ' . $linkStatus . ' href="' . $itemLink . '" rel="noreferrer"><i class="'
             . $itemClass . '"></i><span>' . $itemName . '</span></a>';
         }
-        // <li> <a target="_self" href="xxx.com" class="auto" data-pjax-state=""><span class="nav-icon"><i data-feather="music"></i></span><span>网易云音乐</span></a></li>
+        // <li> <a target="_self" href="xxx.com" class="auto" ><span class="nav-icon"><i data-feather="music"></i></span><span>网易云音乐</span></a></li>
         return $ret;
     }
 
@@ -931,18 +931,18 @@ EOF;
      * HTML样例代码
             <div class="Header_link-section__1JFc9 global-link-section">
 
-            <a href="/timeline" data-pjax-state="">
+            <a href="/timeline" >
                 <div class="Header_parent__3EA6A global-parent"><i class=""></i><span>览</span></div>
             </a>
 
             <div class="Header_children-wrapper__1z9Ni global-children-wrapper">
 
             <a href="/timeline?type=note"
-                    data-pjax-state="">
+                    >
             <div class="Header_children__2ZydX global-children"><i class=""></i><span>生活</span></div>
             </a>
 
-            <a href="/timeline?type=post" data-pjax-state="">
+            <a href="/timeline?type=post" >
                     <div class="Header_children__2ZydX global-children"><i class=""></i><span>博文</span></div>
             </a>
             </div>
@@ -978,7 +978,7 @@ EOF;
             $ret = '<a ' . $linkStatus . ' href="' . $itemLink . '" rel="noreferrer"><div class="Header_children__2ZydX global-children"><i class="'
             . $itemClass . '"></i><span>' . $itemName . '</span></a>';
         }
-        // <li> <a target="_self" href="xxx.com" class="auto" data-pjax-state=""><span class="nav-icon"><i data-feather="music"></i></span><span>网易云音乐</span></a></li>
+        // <li> <a target="_self" href="xxx.com" class="auto" ><span class="nav-icon"><i data-feather="music"></i></span><span>网易云音乐</span></a></li>
         return $ret;
     }
 

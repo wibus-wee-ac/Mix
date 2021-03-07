@@ -118,7 +118,7 @@ function getCatalog() {
                 }
             }
             // $index .= '<li><a href="#cl-' . $catalog_item['count'] . '">' . $catalog_item['text'] . '</a>';
-            $index .= '<a data-scroll="true" href="#cl-' . $catalog_item['count'] . '" data-index="0" class="Toc_toc-link__1Yat3" data-depth="2" style="opacity: 1; transform: translate(0px, 0px);" data-pjax-state=""><span class="Toc_a-pointer__3AN3u">' . $catalog_item['text'] . '</span>';
+            $index .= '<a data-scroll="true" href="#cl-' . $catalog_item['count'] . '" data-index="0" class="Toc_toc-link__1Yat3" data-depth="2" style="opacity: 1; transform: translate(0px, 0px);" ><span class="Toc_a-pointer__3AN3u">' . $catalog_item['text'] . '</span>';
             $prev_depth = $catalog_item['depth'];
         }
         for ($i = 0; $i <= $to_depth; $i++) {

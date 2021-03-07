@@ -28,6 +28,10 @@
 }
 .head-logo{
     background: transparent!important;
+    left: 100px;
+}
+.head-logo svg {
+    height: 2.5em;
 }
 .Header_title__1THMF {
     display: inline-block;
@@ -35,12 +39,11 @@
     font-size: 1.25rem;
     line-height: 1.75rem;
     margin-top: 0;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     position: relative;
+    bottom: 7px;
 }
-.head-logo svg {
-    height: 2.5em;
-}
+
 .head-btn{
     cursor: pointer;
     display: block;
@@ -56,88 +59,6 @@
     transform: translateY(-50%);
     padding: 6px;
 }
-        .Header_drawer__iQn1p.Header_show__3R4Sq {
-            -webkit-transform: translateX(0);
-            transform: translateX(0);
-        }
-        .Header_drawer__iQn1p {
-            background-color: #fff !important;
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 90;
-            padding: 1.5rem;
-            color: var(--light-brown);
-            -webkit-transition-property: -webkit-transform;
-            transition-property: -webkit-transform;
-            transition-property: transform;
-            transition-property: transform, -webkit-transform;
-            -webkit-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-            transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-            -webkit-transition-duration: .15s;
-            transition-duration: .15s;
-            -webkit-transition-duration: .3s;
-            transition-duration: .3s;
-            width: 300px;
-            max-width: 80vw;
-            -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-        }
-        .Header_drawer__iQn1p .Header_children-wrapper__1z9Ni {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-        .text-right {
-            text-align: right;
-        }
-        .Header_link-section__1JFc9 {
-            margin-bottom: 1rem;
-        }
-        .pb-4 {
-            padding-bottom: 2rem;
-        }
-
-        body * {
-            -webkit-transition: color .1s ease-in, background .1s ease-in, border .1s ease-in;
-            transition: color .1s ease-in, background .1s ease-in, border .1s ease-in;
-        }
-
-        .Header_drawer__iQn1p .Header_children__2ZydX,
-        .Header_drawer__iQn1p .Header_parent__3EA6A {
-            padding-top: .5rem;
-            padding-bottom: .5rem;
-        }
-
-        .Header_drawer__iQn1p .Header_parent__3EA6A {
-            font-weight: 500;
-            font-size: 1.25rem;
-            line-height: 2rem;
-        }
-
-        .Header_drawer__iQn1p a {
-            color: inherit;
-        }
-        .Header_drawer__iQn1p svg {
-            margin-right: 1rem;
-        }
-        .Overlay_container__1owmA {
-            position: fixed;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 5;
-        }
-        .Overlay_container__1owmA .Overlay_overlay__2YOqK {
-            position: absolute;
-            top: -20px;
-            bottom: -20px;
-            right: -20px;
-            left: -20px;
-            z-index: -1;
-            background-color: rgba(0,0,0,.3);
-        }
 </style>
 <header class="assets" id="header">
     <div class="jsx-685620294 head-btn" id="btn_active" style="display: flex; align-items: center; justify-content: center; padding: 1em; cursor: pointer;"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="list-ul" class="svg-inline--fa fa-list-ul fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M48 48a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm0 160a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm0 160a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm448 16H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"></path></svg></div>
@@ -225,4 +146,7 @@
           </nav>
         </div>
               </header>
-              
+
+<?php 
+if ($this->options->sideBarStyle == 2) {$this->need('component/sidebar.php');}
+?>

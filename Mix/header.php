@@ -26,7 +26,7 @@ ks.image("img");
   <style><?php $this->options->CSS(); ?></style>
   <?php if($this->options->BackGroundImage):?>
   <style>
-  body {
+  body, nav#Header_head-menu__ofiV5 {
     padding-top: 4em;
     background: url(<?php $this->options->BackGroundImage() ?>) top fixed!important;
   }
@@ -34,7 +34,7 @@ ks.image("img");
   <?php endif;?>
   <?php if($this->options->BackGroundImageDark):?>
   <style>
-  html.dark body {
+  html.dark body, html.dark nav#Header_head-menu__ofiV5 {
     padding-top: 4em;
     background: url(<?php $this->options->BackGroundImageDark() ?>) top fixed!important;
   }

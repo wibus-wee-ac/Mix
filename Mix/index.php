@@ -4,7 +4,7 @@
  * 
  * @package Mix
  * @author Wibus
- * @version 1.4.0
+ * @version 1.3.7
  * @link https://blog.iucky.cn
  */
 
@@ -14,8 +14,6 @@
 
 <!--头部必要元素-->
 <?php $this->need('header.php'); ?>
-
-
 <!--顶部分类配件-->
 <?php 
 if ($this->options->headNavStyle == 1){
@@ -46,7 +44,6 @@ $this->need('component/headnav/new_headnav.php');
 <?php endif;?>
 </div>
 </section>
-
 
 </main>
 </div>

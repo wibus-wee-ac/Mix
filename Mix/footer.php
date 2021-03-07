@@ -76,7 +76,8 @@ SQP.init();
   var pjax = new Pjax({
   selectors: [
     "title",
-    "main" // 这个位置直接舍弃掉<div id="main"></div>
+    "main", // 这个位置直接舍弃掉<div id="main"></div>
+    "#headerr",
   ],
   cacheBust: false //关闭cacheBust，取消后缀
     })
@@ -92,7 +93,6 @@ document.addEventListener('pjax:send', function () {
 })
 document.addEventListener('pjax:complete', function () {
     document.body.classList.remove("loading")
-
 })
 
 
@@ -102,6 +102,7 @@ document.addEventListener('pjax:complete', function () {
       <?php $this->options->PjaxReLoad(); ?>
       SQP.init(); //重载 SQP
       ks.image("img"); // 重载 Kico Style 的图片灯箱
+      
       if (typeof Prism !== 'undefined') {
 var pres = document.getElementsByTagName('pre');
                 for (var i = 0; i < pres.length; i++){
@@ -109,6 +110,11 @@ var pres = document.getElementsByTagName('pre');
                         pres[i].className  = 'line-numbers';}
 Prism.highlightAll(true,null);}
 
+document.getElementById("close").onclick = function(){
+    if(document.getElementById("headerr").className == 'Header_drawer__iQn1p global-drawer Header_show__3R4Sq global-show'){
+        document.getElementById('headerr').className = 'Header_drawer__iQn1p global-drawer';
+    }
+}
   });
 </script>
 
