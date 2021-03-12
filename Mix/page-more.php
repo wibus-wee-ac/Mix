@@ -16,7 +16,11 @@ $slug = "slug=$cate";
 //头部必要元素-
 $this->need('header.php'); 
 ?>
-
+<?php 
+if (empty($cate)) {
+	echo '<script>window.location.replace("'.Helper::options()->siteUrl().'")</script>';
+}
+?>
 <?php 
 if ($this->options->headNavStyle == 1){
 $this->need('component/headnav/headnav.php'); 
