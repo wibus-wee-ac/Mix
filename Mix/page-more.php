@@ -16,11 +16,7 @@ $slug = "slug=$cate";
 //头部必要元素-
 $this->need('header.php'); 
 ?>
-<?php 
-if (empty($cate)) {
-	echo '<script>window.location.replace("'.Helper::options()->siteUrl().'")</script>';
-}
-?>
+<?php if(!empty($$_GET['cate'])):?>
 <?php 
 if ($this->options->headNavStyle == 1){
 $this->need('component/headnav/headnav.php'); 
@@ -62,6 +58,10 @@ $this->need('component/headnav/new_headnav.php');
 	</div>
 </main>
 </div>
-
+<?php else:
+	$site = Helper::options()->siteUrl;
+	echo '<script>window.location.replace("'.$site.'")</script>';
+endif;
+?>
 <!--必要底部元素-->
 <?php $this->need('footer.php'); ?>
