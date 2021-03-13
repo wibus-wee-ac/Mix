@@ -7,7 +7,8 @@
     <h1>
      <div>
       <div class="texty mask-bottom">
-       <span class="" style="opacity: 1; transform: translate(0px, 0%);"><?php $this->title() ?></span>&nbsp;&nbsp;<small style="font-size: 30%">[<a href="javascript:FontZoom(20)">大</a>  <a href="javascript:FontZoom(16)">中</a>  <a href="javascript:FontZoom(12)">小</a>]
+      <span id="title" style="display: none;"><?php $this->title() ?></span>
+       <span id="post_title" style="opacity: 1; transform: translate(0px, 0%);"></span>&nbsp;&nbsp;<small style="font-size: 30%">[<a href="javascript:FontZoom(20)">大</a>  <a href="javascript:FontZoom(16)">中</a>  <a href="javascript:FontZoom(12)">小</a>]
     </small>
 
       </div>
@@ -48,32 +49,18 @@
 
      </div>
     </article>
-    <!-- <script>
-            (() => {// 为小标题加上锚点
-                const postContent = ks.select('.post-content');
-                const titleArr = [];
-                for (let i = 1; i < 5; i++) {
-                    [...postContent.querySelectorAll(`h${i}`)].forEach((item, index) => {
-
-                        const name = item.innerText.slice(-2) === '编辑' ? item.innerText.slice(0, item.innerText.length - 2) : item.innerText;
-                        titleArr.push({tier: i, name, top: window.getElementTop(item)})
-                    })
-                }
-                const torTreeWrap = ks.select('#torTree-wrap');
-                if (titleArr.length === 1) {
-                    return
-                }
-                let torTreeHTML = ` <div class="torTree-title"><a href="javascript:window.scrollSmoothTo(${titleArr[0].top})">${titleArr.shift().name}</a></div><ul>`;
-                for (let item of titleArr) {
-                    torTreeHTML = torTreeHTML + `<a href="javascript:window.scrollSmoothTo(${item.top})"><li class="tier-${item.tier}">${item.name}</li></a>`
-                }
-                torTreeHTML += `</ul>`;
-                torTreeWrap.innerHTML = torTreeHTML;
-                torTreeWrap.removeAttribute('style')
-            })()
-</script> -->
 <?php if (!empty($this->options->Show_what) && in_array('ShowComment', $this->options->Show_what)): ?>
 <?php $this->need('comments.php')?>
 <?php endif; ?>
 </div>
 </section>
+
+<script>
+    let source = document.getElementById('title')
+    let output = document.getElementById('post_title')
+    let typing = new Typing({
+        source,
+        output
+    })
+    typing.start()
+</script> 

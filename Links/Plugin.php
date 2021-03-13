@@ -4,7 +4,7 @@
  * 
  * @package Links
  * @author Hanny, Wibus
- * @version 1.4.1
+ * @version 1.4.2
  * @dependence 14.10.10-*
  * @link https://blog.iucky.cn
  */

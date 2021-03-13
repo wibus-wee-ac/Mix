@@ -4,7 +4,7 @@
           <div class="row" style="padding-bottom:18px">
             <div class="col-m-6 left to-center">
               <p>©
-                <!-- -->2020
+                <!-- -->2021
                 <!-- --> <a href="<?php Helper::options()->siteUrl()?>" target="_blank" rel="noopener"><?php $this->author(); ?></a>.
                 <!-- --> <span title="Stay hungry. Stay foolish. -- Steve Jobs">Stay hungry. Stay foolish.</span></p>
               <p>Powered by <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="react"
@@ -38,6 +38,7 @@
 <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo $GLOBALS['assetURL'] ?>css/sqplayer.css" type="text/css">
   <script src="<?php echo $GLOBALS['assetURL'] ?>js/sqplayer.js"></script>
+  <script src="<?php echo $GLOBALS['assetURL'] ?>js/Typing.js"></script>
   <link rel="stylesheet" href="<?php echo $GLOBALS['assetURL'] ?>css/Super_Code_UI.css">
   <link rel="stylesheet" href="<?php echo $GLOBALS['assetURL'] ?>css/style2.css" data-n-p="">
   <link rel="stylesheet" href="<?php echo $GLOBALS['assetURL'] ?>css/fa-svg.css" data-n-p="">
@@ -160,6 +161,10 @@ Prism.highlightAll(true,null);}
 <script src="<?php echo $GLOBALS['assetURL'] ?>js/Mix.js"></script>
         <script><?php $this->options->JavaScript(); ?></script>
       </footer>
-<script>document.body.classList.remove("loading");</script>
+<script>
+document.body.classList.remove("loading");
+// 求求不要删这里嘤嘤嘤，谢谢大佬了！
+console.log("\n %c Mix v"+window.MIX_CONFIG.VERSION+" By Wibus %c https://iucky.cn","color:#fff;background:linear-gradient(90deg,#448bff,#44e9ff);padding:5px 0;","color:#000;background:linear-gradient(90deg,#44e9ff,#ffffff);padding:5px 10px 5px 0px;");
+</script>
 </body>
 </html>

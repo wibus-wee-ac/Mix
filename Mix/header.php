@@ -52,7 +52,7 @@ ks.image("img");
   <?php $this->header(); ?>
   <script>
     window.MIX_CONFIG = {
-      VERSION: '1.4.1',
+      VERSION: '1.4.2',
       <?php if ($this->options->sideBarStyle == 1):?>
       SIDEBAR: 1,
       <?php elseif ($this->options->sideBarStyle == 2):?>

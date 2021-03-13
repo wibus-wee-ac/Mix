@@ -1,8 +1,8 @@
 <?php
 if (Typecho_Widget::widget('Widget_Options')->UseCDNAssets) {
-    $GLOBALS['assetURL'] = $this->options->CDNURL;
+    $GLOBALS['assetURL'] = Typecho_Widget::widget('Widget_Options')->CDNURL;
 }else{
-    $GLOBALS['assetURL'] = $this->options->themeUrl.'/assets/';
+    $GLOBALS['assetURL'] = Typecho_Widget::widget('Widget_Options')->themeUrl.'/assets/';
 }
 
 ?>
