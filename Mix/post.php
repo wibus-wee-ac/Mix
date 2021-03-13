@@ -11,7 +11,7 @@ $this->need('component/headnav/new_headnav.php');
 <?php if ($PostChoice == 0): ?>
 <div id="main_load">
 <main class="is-article" >
-
+<script src="<?php echo $GLOBALS['assetURL'] ?>js/Typing.js"></script>
 <?php $this->need('component/post/article_post.php'); ?>
 
 </main>

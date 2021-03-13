@@ -38,7 +38,6 @@
 <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo $GLOBALS['assetURL'] ?>css/sqplayer.css" type="text/css">
   <script src="<?php echo $GLOBALS['assetURL'] ?>js/sqplayer.js"></script>
-  <script src="<?php echo $GLOBALS['assetURL'] ?>js/Typing.js"></script>
   <link rel="stylesheet" href="<?php echo $GLOBALS['assetURL'] ?>css/Super_Code_UI.css">
   <link rel="stylesheet" href="<?php echo $GLOBALS['assetURL'] ?>css/style2.css" data-n-p="">
   <link rel="stylesheet" href="<?php echo $GLOBALS['assetURL'] ?>css/fa-svg.css" data-n-p="">
