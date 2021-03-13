@@ -2841,7 +2841,7 @@ body {
 	background: url(https://gitee.com/xun7788/my-imagination/raw/master/cdn/background.png) top fixed
 }
 
-body:before {
+/* body:before {
 	content: "";
 	position: fixed;
 	top: 0;
@@ -2853,7 +2853,7 @@ body:before {
 	-webkit-transition: opacity .5s ease-in;
 	-moz-transition: opacity .5s ease-in;
 	transition: opacity .5s ease-in
-}
+} */
 
 ::-webkit-scrollbar {
 	width: 4px;

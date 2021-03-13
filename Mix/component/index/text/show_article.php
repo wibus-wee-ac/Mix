@@ -8,7 +8,7 @@
     .wrap {
         margin: 0 auto;
         max-width: 1200px;
-        padding: 0 1.25em;
+        /* padding: 0 1.25em; */
         box-sizing: content-box;
     }
 </style>
