@@ -23,8 +23,6 @@ require("libs/Utils.php"); //Utils，在libs.php中需要使用
 /**
  * Helper类
  */
-require("libs/helper/admin_helper.php"); //对后台设置添加方便使用的函数
-require("libs/helper/AdminSetting.php"); 
 require("libs/helper/functions_helper.php"); //一些额外的functions
 require("libs/helper/plugins_helper.php"); //使用插件接口实现的东西
 
