@@ -1,0 +1,139 @@
+.smile-icons svg {
+    width: 16px;
+    height: 16px;
+    vertical-align: -5px;
+    /*padding: 2px 10px;*/
+}
+.insert_button {
+    display: inline-block;
+    color: #999;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    padding: 2px 5px;
+    cursor: pointer;
+    height: 22px;
+    box-sizing: border-box;
+    z-index: 2;
+    line-height: 16px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.typecho-list-table textarea, .typecho-list-table input[type="text"] {
+    width: 100%;
+}
+
+@media(max-width:990px ){
+
+    .span_insert{
+        position: relative;
+        user-select: none;
+        margin-top: 25px;
+        display: inline-block;
+    }
+}
+
+@media(max-width: 325px){
+    .span_insert{
+        position: relative;
+        user-select: none;
+        margin-top: 45px;
+        display: inline-block;
+    }
+}
+
+.OwO .OwO-body{
+    top: 25px;
+    position: absolute;
+    left: -22px;
+}
+.OwO-logo .fontello-emo-tongue{
+    display: none;
+}
+.OwO .OwO-logo{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: auto;
+}
+
+.wmd-button{
+    min-width: 16px;
+    min-height: 16px;
+    vertical-align: middle;
+    fill: currentColor;
+}
+
+
+@media (max-width: 1740px) {
+    .fullscreen #text{
+        top: 80px;
+    }
+}
+
+@media (max-width: 910px) {
+    .fullscreen #text{
+        top: 106px;
+    }
+}
+
+
+@media (max-width: 650px) {
+    .fullscreen #text{
+        top: 132px;
+    }
+}
+
+
+@media (max-width: 510px) {
+    .fullscreen #text{
+        top: 155px;
+    }
+
+    .fullscreen #wmd-preview{
+        top: 100px;
+    }
+}
+
+@media (max-width: 440px) {
+    .fullscreen #text{
+        top: 182px;
+    }
+}
+
+@media (max-width: 390px) {
+    .fullscreen #text{
+        top: 208px;
+    }
+    .fullscreen #wmd-preview{
+        top: 116px;
+    }
+}
+
+
+
+.OwO span{
+    background: none!important;
+    width: auto!important;
+    height: auto!important;
+}
+.OwOlogotext{
+    display: none!important;
+}
+.OwO .OwO-logo{
+    background: none;
+}
+
+@media (max-width: 450px){
+    .OwO .OwO-body {
+        width: 220px!important;
+        position: absolute;
+        top: 38px;
+        left: 0;
+    }
+
+}
+
+.wmd-prompt-dialog textarea {
+    margin-bottom: 10px;
+    width: 100%;
+}
