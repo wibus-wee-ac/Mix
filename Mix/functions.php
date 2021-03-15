@@ -25,12 +25,15 @@ require("libs/Utils.php"); //Utils，在libs.php中需要使用
  */
 require("libs/helper/functions_helper.php"); //一些额外的functions
 require("libs/helper/plugins_helper.php"); //使用插件接口实现的东西
+require("libs/helper/Admin_Helper.php");
+require("libs/helper/AdminSetting.php"); 
 
 /**
  * 主题参数设置应用类
  */
 require("Core/Backup.php"); //备份
 require("functions_Config.php"); //模板外观设置
+require("Core/SettingOutPut.php"); //输出前部控制
 
 /*表单组件*/
 require("libs/admin/FormElements.php");

@@ -1,13 +1,17 @@
 <!--头部必要元素-->
-<?php $this->need('header.php'); ?>
-<?php $PostChoice = $this->fields->PostChoice;?>
 <?php 
+
+$this->need('header.php');
+
+$PostChoice = $this->fields->PostChoice;
 if ($this->options->headNavStyle == 1){
-$this->need('component/headnav/headnav.php'); 
+    $this->need('component/headnav/headnav.php'); 
 }else if ($this->options->headNavStyle == 2){
-$this->need('component/headnav/new_headnav.php'); 
+    $this->need('component/headnav/new_headnav.php'); 
 }
+
 ?>
+
 <?php if ($PostChoice == 0): ?>
 <div id="main_load">
 <main class="is-article" >
