@@ -10,7 +10,8 @@ class AdminSetting{
         $themeUrl = THEME_URL;
         $randomColor = Admin_Helper::getBackgroundColor();
         //$randomColor[0] = "#fff";
-        $styleHTML = '<style>
+        $styleHTML = <<<EOF
+        <style>
         :root{--randomColor0:{$randomColor[0]};--randomColor1:{$randomColor[1]};}
         </style>
             <link rel="stylesheet" href="{$themeUrl}assets/css/admin/editor.min.css" type="text/css" />
@@ -18,7 +19,8 @@ class AdminSetting{
             <link rel="stylesheet" href="{$themeUrl}assets/js/admin/admin.min.js" type="text/css" />
             <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
             <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js" type="text/javascript"></script>
-            <link href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css" rel="stylesheet">';
+            <link href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css" rel="stylesheet">
+EOF;
         return $styleHTML;
     }
 

@@ -69,17 +69,6 @@ class Backup{
         }
         echo '<form class="protected home col-mb-12" action="?' . $name . 'bf" method="post">
     <input type="submit" name="type" class="btn btn-s" value="备份模板设置数据" />&nbsp;&nbsp;<input type="submit" name="type" class="btn btn-s" value="还原模板设置数据" />&nbsp;&nbsp;<input type="submit" name="type" class="btn btn-s" value="删除备份数据" /></form><br>';
-        if (!$_POST) {
-            echo ' 
-      </p>
-       </div>
-       <div class="tab-pane fade" id="jmeter">
-          <p>jMeter is an Open Source testing software. It is 100% pure 
-          Java application for load and performance testing.</p>
-       </div>
-       <div class="tab-pane fade" id="ejb">
-          <p>';
-        }
         }
     }
     
