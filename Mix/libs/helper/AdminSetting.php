@@ -46,6 +46,10 @@ EOF;
     \'' . $pluginExInfo . '\'}" style="color: rgb(26, 188, 156);"><span 
         class="mdui-chip-icon mdui-color-green"><i class="mdui-icon material-icons">&#xe8ba;</i></span><span class="mdui-chip-title">配套插件已启用</span></div>';
         }
+        if (!Admin_Helper::isPluginAvailable("Links_Plugin", "Links")) {
+          $pluginInfo .= '<script>alert("主题监测到配套插件出现问题 \n请你启动或重新启动Links插件")</script>';
+        }
+
         $welcomeHTML = <<<EOF
         <div class="mdui-card">
   <!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
