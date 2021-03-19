@@ -64,6 +64,9 @@ class Backup{
                 message: '数据库中没有当前主题的备份数据！自动刷新中...'
             });
             </script>";
+            ?>
+        <script language="JavaScript">window.setTimeout("location=\'<?php Helper::options()->adminUrl('options-theme.php'); ?>\'", 2000);</script>
+        <?
         }
         }
         if($_POST["type"]=="删除现有Mix备份"){
@@ -85,6 +88,9 @@ class Backup{
                 message: '数据库中没有当前主题的备份数据！自动刷新中...'
             });
             </script>";
+            ?>
+        <script language="JavaScript">window.setTimeout("location=\'<?php Helper::options()->adminUrl('options-theme.php'); ?>\'", 2000);</script>
+        <?
         }
         }
     }
