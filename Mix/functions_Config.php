@@ -10,26 +10,62 @@ function themeConfig($form) {
 
     Backup::echoBackup();
 
-    $form->addItem(new Typecho_Widget_Helper_Layout("h3> SEO设置 </h3"));
-    $form->addItem(new Typecho_Widget_Helper_Layout("small> 仅辅助优化SEO，主要请前往typecho基本设置！ </small"));
-    $form->addItem(new Typecho_Widget_Helper_Layout("hr> </hr"));
+    $form->addItem(new CustomLabel('<div class="mdui-panel" mdui-panel="">'));
+    $form->addItem(new Title('外观设置','图标设置,背景设置'));
+     //GitHub图标设置
+     $HeaderGitHub = new Text('HeaderGitHub', NULL, _t('https://github.com/wibus-wee'), _t('GitHub图标设置'), _t('这里填写的是URL'));
+     $form->addInput($HeaderGitHub);
+     //QQ图标设置
+     $HeaderQQ = new Text('HeaderQQ', NULL, _t('#'), _t('QQ图标设置'), _t('这里填写的是URL'));
+     $form->addInput($HeaderQQ);
+     //BiliBili图标设置
+     $HeaderBiliBili = new Text('HeaderBiliBili', NULL, _t('#'), _t('BiliBili图标设置'), _t('这里填写的是URL'));
+     $form->addInput($HeaderBiliBili);
+     //第四个图标
+     $HeaderFourHTML = new Textarea('HeaderFourHTML', NULL, _t(''), _t('顶部导航栏第四个图标设置'), _t('此处填写HTML'));
+     $form->addInput($HeaderFourHTML);
+
+
+     //BackGroundImage
+     $BackGroundImage = new Text('BackGroundImage', NULL, NULL, _t('背景图设置'), _t('此处填写链接URL，若不填写则默认花花背景'));
+     $form->addInput($BackGroundImage);
+     //BackGroundImage
+     $BackGroundImageDark = new Text('BackGroundImageDark', NULL, NULL , _t('<strong style="color: ref">夜间模式</strong> 背景图设置'), _t('此处填写链接URL，若不填写则默认暗色花花背景'));
+     $form->addInput($BackGroundImageDark);
+     $UseOtherBackGround = new Select('UseOtherBackGround', array(
+         '0'=>'不使用（默认）',
+         '1'=> '使用'
+     ),'0', _t('是否使用额外的一个白色背景防止字体不清晰'), '可以在下面选项填入其他的style');
+     $form->addInput($UseOtherBackGround);
+     $BackColor = new Text('BackColor', NULL, _t(''), _t('自定义第二背景CSS'), _t('这里填写的需要CSS格式'));
+     $form->addInput($BackColor);
+
+    $form->addItem(new EndSymbol(2));
+    $form->addItem(new Title('初级设置','首页名称、首页标题后缀、博主的名称、博主的介绍、头部导航栏图标、头像图片地址'));
 
     //顶部名字
-    $cut_off = new Radio('cut_off',
-        array(
-            '·' => _t('<code>&nbsp;·&nbsp;</code>'),
-            '-' => _t('<code>&nbsp;-&nbsp;</code>')
-        ),
-        '-', _t('站点标题与描述之间的分割线'), _t('请谨慎选择，一旦选择，<b>非特殊情况请不要修改！</b>'));
+    $cut_off = new Radio('cut_off',array('·' => _t('<code>&nbsp;·&nbsp;</code>'),'-' => _t('<code>&nbsp;-&nbsp;</code>')),'-', _t('首页标题后缀分割线'), _t('请谨慎选择，一旦选择，<b>非特殊情况请不要修改！</b>'));
     $form->addInput($cut_off);  
 
     //SEO描述
-    $HeaderDescription = new Text('HeaderDescription', NULL, _t('Double space mixture'), _t('SEO描述'), _t('这里填写的是文字'));
+    $HeaderDescription = new Text('HeaderDescription', NULL, _t('Double space mixture'), _t('首页标题后缀'), _t('你的博客标题栏博客名称后面的副标题，如果为空，则不显示副标题</br></br>'));
     $form->addInput($HeaderDescription);  
 
-    $form->addItem(new Typecho_Widget_Helper_Layout("h3> 基本设置 </h3"));
-    $form->addItem(new Typecho_Widget_Helper_Layout("small> 设置主题的基本功能 </small"));
-    $form->addItem(new Typecho_Widget_Helper_Layout("hr> </hr"));
+     //顶部名字
+     $HeaderName = new Text('HeaderName', NULL, _t('Wibus'), _t('博主的名称'), _t('这里填写的是文字'));
+     $form->addInput($HeaderName);     
+     //顶部描述
+     $HeaderMore= new Text('HeaderMore', NULL, _t('Just Uaeua'), _t('博主的介绍'), _t('这里填写的是文字'));
+     $form->addInput($HeaderMore);   
+     //顶部最大头像
+     $HeaderPhoto = new Text('HeaderPhoto', NULL, _t('https://q.qlogo.cn/g?b=qq&nk=1596355173&s=640'), _t('头像图片地址'), _t('这里填写的是照片URL'));
+     $form->addInput($HeaderPhoto);
+
+
+    $form->addItem(new Typecho_Widget_Helper_Layout("/div"));
+    $form->addItem(new Typecho_Widget_Helper_Layout("/div"));
+    $form->addItem(new Title('部件设置','Mix主题不同的部件设置'));
+
     $Show_what = new Checkbox('Show_what', 
     array(
         'ShowCopyRight' => '显示CopyRight',
@@ -38,44 +74,47 @@ function themeConfig($form) {
     ),
     array('ShowCopyRight','ShowComment', 'ShowIMouse'),_t('全局启动部件'),_t('部件启动选项'));  
         $form->addInput($Show_what->multiMode());
-    //顶部名字
-    $HeaderName = new Text('HeaderName', NULL, _t('Wibus'), _t('顶部名字'), _t('这里填写的是文字'));
-    $form->addInput($HeaderName);     
-    //顶部描述
-    $HeaderMore= new Text('HeaderMore', NULL, _t('Just Uaeua'), _t('顶部描述'), _t('这里填写的是文字'));
-    $form->addInput($HeaderMore);   
-    //顶部最大头像
-    $HeaderPhoto = new Text('HeaderPhoto', NULL, _t('https://q.qlogo.cn/g?b=qq&nk=1596355173&s=640'), _t('顶部最大头像'), _t('这里填写的是照片URL'));
-    $form->addInput($HeaderPhoto);
-    //GitHub图标设置
-    $HeaderGitHub = new Text('HeaderGitHub', NULL, _t('https://github.com/wibus-wee'), _t('GitHub图标设置'), _t('这里填写的是URL'));
-    $form->addInput($HeaderGitHub);
-    //QQ图标设置
-    $HeaderQQ = new Text('HeaderQQ', NULL, _t('#'), _t('QQ图标设置'), _t('这里填写的是URL'));
-    $form->addInput($HeaderQQ);
-    //BiliBili图标设置
-    $HeaderBiliBili = new Text('HeaderBiliBili', NULL, _t('#'), _t('BiliBili图标设置'), _t('这里填写的是URL'));
-    $form->addInput($HeaderBiliBili);
-    //第四个图标
-    $HeaderFourHTML = new Textarea('HeaderFourHTML', NULL, _t(''), _t('顶部导航栏第四个图标设置'), _t('此处填写HTML'));
-    $form->addInput($HeaderFourHTML);
-    //BackGroundImage
-    $BackGroundImage = new Text('BackGroundImage', NULL, NULL, _t('背景图设置'), _t('此处填写链接URL，若不填写则默认花花背景'));
-    $form->addInput($BackGroundImage);
-    //BackGroundImage
-    $BackGroundImageDark = new Text('BackGroundImageDark', NULL, NULL , _t('<strong style="color: ref">夜间模式</strong> 背景图设置'), _t('此处填写链接URL，若不填写则默认暗色花花背景'));
-    $form->addInput($BackGroundImageDark);
-    $UseOtherBackGround = new Select('UseOtherBackGround', array(
-        '0'=>'不使用（默认）',
-        '1'=> '使用'
-    ),'0', _t('是否使用额外的一个白色背景防止字体不清晰'), '可以在下面选项填入其他的style');
-    $form->addInput($UseOtherBackGround);
-    $BackColor = new Text('BackColor', NULL, _t(''), _t('自定义第二背景CSS'), _t('这里填写的需要CSS格式'));
-    $form->addInput($BackColor);
 
-    $form->addItem(new Typecho_Widget_Helper_Layout("h3> 进阶设置 </h3"));
-    $form->addItem(new Typecho_Widget_Helper_Layout("small> 设置主题的进阶功能 </small"));
-    $form->addItem(new Typecho_Widget_Helper_Layout("hr> </hr"));
+
+        $headNavStyle = new Select('headNavStyle', array(
+            '1'=>'1.0 样式',
+            '2'=> '2.0 样式'
+        ),'2', _t('头部导航栏使用的样式'), NULL);
+        $form->addInput($headNavStyle);
+        //顶部导航栏图标
+        $HeadNavPhoto = new Textarea('HeadNavPhoto', NULL, _t(''), _t('顶部左侧图片配置'), _t('此处填写HTML代码，可不填写'));
+        $form->addInput($HeadNavPhoto);
+        //顶部导航自定义2.0
+        $headnavItems = new Textarea('headnavItems', NULL, NULL, _t('顶部导航配置（2.0样式）'), '<span style="color:red;">如果不明白此项，请清空该项，可不填写</span>');
+        $form->addInput($headnavItems);
+    
+        $sideBarStyle = new Select('sideBarStyle', array(
+            '1'=>'下展开样式',
+            '2'=> '右侧展开样式'
+        ),'2', _t('手机端菜单栏使用的样式'), NULL);
+        $form->addInput($sideBarStyle);
+    
+        $showIndexStyle = new Select('showIndexStyle', array(
+            '1'=>'小卡片',
+            '2'=> '纯文字'
+        ),'1', _t('首页显示文章使用的样式'), NULL);
+        $form->addInput($showIndexStyle);
+    
+        $Show_what_1 = new Checkbox('Show_what_1', 
+        array(
+        'ShowHeadSVG' => _t('顶部头像部件（通用）'),
+        // 'ShowArticle' => _t('文章'),
+        // 'ShowDairy' => _t('日记'),
+        'ShowMore' => _t('了解更多（仅1.0）'),
+        ),
+        array('ShowHeadSVG'),_t('启动的部件'),_t('部件启动选项'));  
+        $form->addInput($Show_what_1->multiMode());
+
+        $form->addItem(new Typecho_Widget_Helper_Layout("/div"));
+        $form->addItem(new Typecho_Widget_Helper_Layout("/div"));
+        $form->addItem(new Title('进阶设置','Mix主题的进阶设置'));
+
+        
 
     //More第一个设置
     $MoreJSON = new Textarea('MoreJSON', NULL, _t(''), _t('了解更多模块设置'), _t('此处填写Json，请看使用文档再进行填写'));
@@ -96,47 +135,9 @@ function themeConfig($form) {
     $FriendURL = new Text('FriendURL', NULL, _t(''), _t('友链内页链接'), _t('这里填写的是URL，填入<code>友链</code>页面链接，可省略'));
     $form->addInput($FriendURL);
 
-
-    $form->addItem(new Typecho_Widget_Helper_Layout("h3> 样式配置 </h3"));
-    $form->addItem(new Typecho_Widget_Helper_Layout("small> 设置主题的样式 </small"));
-    $form->addItem(new Typecho_Widget_Helper_Layout("hr> </hr"));
-    $headNavStyle = new Select('headNavStyle', array(
-        '1'=>'1.0 样式',
-        '2'=> '2.0 样式'
-    ),'2', _t('头部导航栏使用的样式'), NULL);
-    $form->addInput($headNavStyle);
-    //顶部导航栏图标
-    $HeadNavPhoto = new Textarea('HeadNavPhoto', NULL, _t(''), _t('顶部左侧图片配置'), _t('此处填写HTML代码，可不填写'));
-    $form->addInput($HeadNavPhoto);
-    //顶部导航自定义2.0
-    $headnavItems = new Textarea('headnavItems', NULL, NULL, _t('顶部导航配置（2.0样式）'), '<span style="color:red;">如果不明白此项，请清空该项，可不填写</span>');
-    $form->addInput($headnavItems);
-
-    $sideBarStyle = new Select('sideBarStyle', array(
-        '1'=>'下展开样式',
-        '2'=> '右侧展开样式'
-    ),'2', _t('手机端菜单栏使用的样式'), NULL);
-    $form->addInput($sideBarStyle);
-
-    $showIndexStyle = new Select('showIndexStyle', array(
-        '1'=>'小卡片',
-        '2'=> '纯文字'
-    ),'1', _t('首页显示文章使用的样式'), NULL);
-    $form->addInput($showIndexStyle);
-
-    $Show_what_1 = new Checkbox('Show_what_1', 
-    array(
-    'ShowHeadSVG' => _t('顶部头像部件（通用）'),
-    // 'ShowArticle' => _t('文章'),
-    // 'ShowDairy' => _t('日记'),
-    'ShowMore' => _t('了解更多（仅1.0）'),
-    ),
-    array('ShowHeadSVG'),_t('启动的部件'),_t('部件启动选项'));  
-    $form->addInput($Show_what_1->multiMode());
-
-    $form->addItem(new Typecho_Widget_Helper_Layout("h3> 开发者设置 </h3"));
-    $form->addItem(new Typecho_Widget_Helper_Layout("small> 设置主题的开发者功能，如JavaScript, CSS等 </small"));
-    $form->addItem(new Typecho_Widget_Helper_Layout("hr> </hr"));
+    $form->addItem(new Typecho_Widget_Helper_Layout("/div"));
+    $form->addItem(new Typecho_Widget_Helper_Layout("/div"));
+    $form->addItem(new Title('开发者设置','自定义CSS，JavaScript等等'));
 
     //自定义CSS
     $CSS = new Textarea('CSS', NULL, _t(''), _t('自定义 CSS'), _t('这里填写的是css代码，来进行自定义样式，会自动输出到<\/head>标签之前'));
@@ -158,9 +159,9 @@ function themeConfig($form) {
     $RightHTML = new Textarea('RightHTML', NULL, _t(''), _t('博客底部右侧信息'), _t('这里面填写的是 html代码，位置是博客底部的右边。'));
     $form->addInput($RightHTML);
 
-    $form->addItem(new Typecho_Widget_Helper_Layout("h3> Pjax设置 </h3"));
-    $form->addItem(new Typecho_Widget_Helper_Layout("small> 设置主题的Pjax功能 </small"));
-    $form->addItem(new Typecho_Widget_Helper_Layout("hr> </hr"));
+    $form->addItem(new Typecho_Widget_Helper_Layout("/div"));
+    $form->addItem(new Typecho_Widget_Helper_Layout("/div"));
+    $form->addItem(new Title('Pjax设置','设置Mix主题的Pjax功能'));
 
     $PjaxOption = new Select('PjaxOption', array(
         'jQueryPjax' => _t('jQuery版 Pjax'),
@@ -171,9 +172,9 @@ function themeConfig($form) {
     $PjaxReLoad = new Textarea('PjaxReLoad', NULL, _t(''), _t('Pjax重载函数'), _t('这里面填写的是代码，用于重载Pjax函数'));
     $form->addInput($PjaxReLoad);
 
-    $form->addItem(new Typecho_Widget_Helper_Layout("h3> 更多外观设置 </h3"));
-    $form->addItem(new Typecho_Widget_Helper_Layout("small> 主题的元素动画、颜色设置 </small"));
-    $form->addItem(new Typecho_Widget_Helper_Layout("hr> </hr"));
+    $form->addItem(new Typecho_Widget_Helper_Layout("/div"));
+    $form->addItem(new Typecho_Widget_Helper_Layout("/div"));
+    $form->addItem(new Title('更多外观设置','设置元素动画'));
     
     $IndexAction = new Text('IndexAction', NULL, _t('fade-larger-small 1s'), _t('首页文章卡片动画'), _t('默认值：fade-larger-small 1s'));
     $form->addInput($IndexAction);
@@ -181,9 +182,9 @@ function themeConfig($form) {
     $form->addInput($LinksAction);
 
 
-    $form->addItem(new Typecho_Widget_Helper_Layout("h3> IMouse设置 </h3"));
-    $form->addItem(new Typecho_Widget_Helper_Layout("small> 主题的鼠标样式设置 </small"));
-    $form->addItem(new Typecho_Widget_Helper_Layout("hr> </hr"));
+    $form->addItem(new Typecho_Widget_Helper_Layout("/div"));
+    $form->addItem(new Typecho_Widget_Helper_Layout("/div"));
+    $form->addItem(new Title('IMouse设置','IMouse鼠标，只有全局启动部件中启动才有效'));
 
     $IMouseDefaultBackgroundColor = new Text('IMouseDefaultBackgroundColor', NULL, _t('\'rgba(1, 80, 111, .1)\''), _t('非 hover 默认状态下的光标背景颜色，CSS 格式'), _t('默认值：\'rgba(1, 80, 111, .1)\''));
     $form->addInput($IMouseDefaultBackgroundColor);
@@ -208,11 +209,16 @@ function themeConfig($form) {
     $form->addInput($IMouseSelectionHeight);
     $IMouseSelectionRadius = new Text('IMouseSelectionRadius', NULL, _t('2'), _t('文字选择状态下的光标圆角半径'), _t('默认值：2'));
     $form->addInput($IMouseSelectionRadius);
-    /*
-    Example:
-    $name = new Text('name', NULL, _t(''), _t('Title'), _t('Description'));
-    $form->addInput($name);
-    */
+
+    $form->addItem(new Typecho_Widget_Helper_Layout("/div"));
+    $form->addItem(new Typecho_Widget_Helper_Layout("/div"));
+
+    //mdui-panel 结束符
+    $form->addItem(new Typecho_Widget_Helper_Layout("/div"));
+
+    $submit = new Typecho_Widget_Helper_Form_Element_Submit(NULL, NULL, _t('保存设置'));
+    $submit->input->setAttribute('class', 'mdui-btn mdui-color-theme-accent mdui-ripple submit_only');
+    $form->addItem($submit);
 }
 
 /*

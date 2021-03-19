@@ -137,3 +137,23 @@ function themeInit($archive) {
         $archive->content = createCatalog($archive->content);
     }
 }
+
+function debug($t){
+	switch($options->debug){
+		case 0:
+			break;
+		case 1:
+			echo <<<EOF
+			<script>console.log("{$t}")</script>
+EOF;
+		case 2:
+			echo <<<EOF
+			<script>
+				console.log("{$t}");
+				ks.notice("{$t}", {
+				    color: "yellow"
+				});
+			</script>
+EOF;
+	};
+};
