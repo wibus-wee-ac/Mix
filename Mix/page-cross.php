@@ -107,7 +107,7 @@ function threadedComments($comments, $options)
 <?php endif; ?>
 <?php $this->comments()->to($comments); ?>
 <article class="comment-list">
-  <h1><?php $this->commentsNum(_t('暂无说说'), _t('仅有一条说说'), _t('已发表 %d 条说说')); ?></h1>
+  <h1><?php $this->commentsNum(_t('暂无说说'), _t('这里是说说'), _t('这里是说说')); ?></h1>
   <!--    回复评论框-->
 
   <div class="reply" id="<?php $this->respondId(); ?>" style="display: none">
