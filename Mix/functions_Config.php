@@ -159,6 +159,14 @@ function themeConfig($form) {
     $RightHTML = new Textarea('RightHTML', NULL, _t(''), _t('博客底部右侧信息'), _t('这里面填写的是 html代码，位置是博客底部的右边。'));
     $form->addInput($RightHTML);
 
+    $debug = new Select('debug', array(
+        '0'=>'生产环境（默认）',
+        '1'=> '调试环境（调试推荐）',
+        '2'=> '开发环境（开发推荐）'
+    ),'0', _t('Debug模式'), '<strong style="color:red;">如果你不懂此选项，请不要随便选择！</strong>');
+    $form->addInput($debug);
+
+    
     $form->addItem(new Typecho_Widget_Helper_Layout("/div"));
     $form->addItem(new Typecho_Widget_Helper_Layout("/div"));
     $form->addItem(new Title('Pjax设置','设置Mix主题的Pjax功能'));
