@@ -5664,8 +5664,8 @@ body * {
 .Header_drawer__iQn1p a {
 	color: inherit;
 }
-.Header_drawer__iQn1p svg {
-	margin-right: 1rem;
+.Header_drawer__iQn1p span {
+    margin-left: .5em;
 }
 .Overlay_container__1owmA {
 	position: fixed;
@@ -5683,4 +5683,7 @@ body * {
 	left: -20px;
 	z-index: -1;
 	background-color: rgba(0,0,0,.3);
+}
+.display_none{
+	display: none;
 }

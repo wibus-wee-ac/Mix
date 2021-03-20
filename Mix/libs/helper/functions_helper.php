@@ -143,17 +143,17 @@ function debug($t){
 		case 0:
 			break;
 		case 1:
-			echo <<<EOF
-			<script>console.log("{$t}")</script>
-EOF;
+			$out = '<script>console.log("'.$t.'")</script>';
+            break;
 		case 2:
-			echo <<<EOF
+			$out = '
 			<script>
-				console.log("{$t}");
+				console.log("'.$t.'");
 				ks.notice("{$t}", {
 				    color: "yellow"
 				});
-			</script>
-EOF;
+			</script>';
+            break;
 	};
+    echo $out;
 };

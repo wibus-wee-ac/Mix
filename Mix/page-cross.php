@@ -51,7 +51,7 @@ function threadedComments($comments, $options)
   
     <div id="<?php $comments->theId(); ?>">
       <div class="comments-body">
-        <?php $avatar = 'https://api.paugram.com/gravatar/?email='.$comments->mail.''; ?>
+      <?php $avatar = 'https://cdn.v2ex.com/gravatar/' . md5(strtolower($comments->mail)) . '?s=80&r=X&d='; ?>
         <img class="avatar" src="<?php echo $avatar ?>" alt="<?php echo $comments->author; ?>"/>
         <div class="line"></div>
         <div class="comment_main">
