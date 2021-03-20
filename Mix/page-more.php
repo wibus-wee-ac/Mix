@@ -1,4 +1,11 @@
 <?php
+/*
+ * @Name: 
+ * @author: Wibus
+ * @Date: 2021-03-15 22:51:30
+ * @LastEditors: Wibus
+ * @LastEditTime: 2021-03-20 21:10:19
+ */
 
 	/**
 	* 首页文章更多
@@ -16,7 +23,7 @@ $slug = "slug=$cate";
 //头部必要元素-
 $this->need('header.php'); 
 ?>
-<?php if(!empty($$_GET['cate'])):?>
+
 <?php 
 if ($this->options->headNavStyle == 1){
 $this->need('component/headnav/headnav.php'); 
@@ -58,10 +65,5 @@ $this->need('component/headnav/new_headnav.php');
 	</div>
 </main>
 </div>
-<?php else:
-	$site = Helper::options()->siteUrl;
-	echo '<script>window.location.replace("'.$site.'")</script>';
-endif;
-?>
 <!--必要底部元素-->
 <?php $this->need('footer.php'); ?>
