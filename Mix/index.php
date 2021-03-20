@@ -26,6 +26,11 @@ debug('使用headnavStyle为2的头部导航栏');
 ?>
 <div id="main_load">
 <main>
+
+<?php 
+if ($this->options->sideBarStyle == 2) {$this->need('component/sidebar.php');}
+?>
+
 <!--顶部最大头像以及附属svg-->
 <?php $this->need('component/index/area-head.php'); ?>
 <?php if($this->options->showIndexStyle == 1): 

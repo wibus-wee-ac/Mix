@@ -146,7 +146,3 @@
           </nav>
         </div>
               </header>
-
-<?php 
-if ($this->options->sideBarStyle == 2) {$this->need('component/sidebar.php');}
-?>
