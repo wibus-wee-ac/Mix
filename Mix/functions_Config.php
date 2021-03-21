@@ -236,7 +236,7 @@ function themeConfig($form) {
 function themeFields(Typecho_Widget_Helper_Layout $layout){
 
 
-    $PostChoice = new Select('PostChoice', array(
+    $PostChoice = new ypecho_Widget_Helper_Form_Element_Select('PostChoice', array(
         '0'=>'文章样式',
         '1'=> '日记样式'
     ),'0', _t('当前文章页面样式类型'), '<strong style="color:red;">该设置仅对该篇文章有效</strong></br>默认选项是「文章」样式</br> 选择「日记」当前文章页面样式将会改为日记样式</br>不建议文章使用日记样式，日记使用文章样式');
