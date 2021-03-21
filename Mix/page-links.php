@@ -1,4 +1,11 @@
 <?php
+/*
+ * @Name: page-links.php
+ * @author: Wibus
+ * @Date: 2021-03-15 22:51:31
+ * @LastEditors: Wibus
+ * @LastEditTime: 2021-03-21 13:11:27
+ */
 
 	/**
 	* 友链页面
@@ -24,6 +31,9 @@ $this->need('component/headnav/new_headnav.php');
 </style>
 <div  id="main_load">
 <main  class="is-article" id="article-wrap">
+<?php 
+if ($this->options->sideBarStyle == 2) {$this->need('component/sidebar.php');}
+?>
     <section class="post-title">
         <h1>
             <div>

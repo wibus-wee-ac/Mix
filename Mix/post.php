@@ -1,4 +1,3 @@
-<!--头部必要元素-->
 <?php 
 
 $this->need('header.php');
@@ -15,6 +14,9 @@ if ($this->options->headNavStyle == 1){
 <?php if ($PostChoice == 0): ?>
 <div id="main_load">
 <main class="is-article" >
+<?php 
+if ($this->options->sideBarStyle == 2) {$this->need('component/sidebar.php');}
+?>
 <!-- <script src="<?php echo $GLOBALS['assetURL'] ?>js/Typing.js"></script> -->
 <?php $this->need('component/post/article_post.php'); ?>
 

@@ -18,6 +18,9 @@ $this->need('component/headnav/new_headnav.php');
 ?>
 <div id="main_load">
 <main>
+<?php 
+if ($this->options->sideBarStyle == 2) {$this->need('component/sidebar.php');}
+?>
 <div class="cross">
 <?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;

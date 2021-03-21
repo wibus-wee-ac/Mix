@@ -33,6 +33,9 @@ $this->need('component/headnav/new_headnav.php');
 ?>
 <div id="main_load">
 <main  class="is-article" id="article-wrap">
+<?php 
+if ($this->options->sideBarStyle == 2) {$this->need('component/sidebar.php');}
+?>
 	<div>
 		<article class="post-content paul-note">
 			<article class="paul-note">

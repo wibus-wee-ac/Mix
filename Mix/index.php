@@ -50,9 +50,9 @@ if ($this->options->sideBarStyle == 2) {$this->need('component/sidebar.php');}
 <?php endif; ?>
 <?php elseif($this->options->showIndexStyle == 2):
     debug('纯文字样式');
-    ?>
-<?php $this->need('component/index/text/show_article.php'); ?>
-<?php endif;?>
+    $this->need('component/index/text/show_article.php');
+    endif;
+?>
 </div>
 </section>
 
