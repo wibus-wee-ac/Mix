@@ -616,6 +616,10 @@ pre>code {
 	background-color: #333
 }
 
+#write code::-webkit-scrollbar {
+    display: none;
+}
+
 ol,ul {
 	margin-left: 1.25em
 }
@@ -4786,7 +4790,8 @@ html.dark :not(pre)>code {
 
 #write pre>code {
 	max-height: 70vh;
-	border-left: 20px solid transparent;
+	border-left: 10px solid transparent;
+	font-size: 13px;
 }
 
 #write pre:after,#write pre:before {
