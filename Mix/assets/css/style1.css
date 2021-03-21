@@ -4785,7 +4785,8 @@ html.dark :not(pre)>code {
 }
 
 #write pre>code {
-	max-height: 70vh
+	max-height: 70vh;
+	border-left: 20px solid transparent;
 }
 
 #write pre:after,#write pre:before {

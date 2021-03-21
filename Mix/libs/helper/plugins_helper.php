@@ -17,7 +17,12 @@ class CodePretty{
      *@return void
      */
     public static function header() {
-        $cssUrl = 'https://wibus.gitee.io/blog-assets-goo/mix-asset/1.3.7/code_pretty/styles/mix.css';
+        $cssUrl = $GLOBALS['assetURL'].'code_pretty/styles/BlackMac.css';
+        // 自带CSS列表：
+        // 1. mix.css -- 白色无边框
+        // 2. WhiteMac.css -- 白色Mac代码高亮
+        // 3. BlackMac.css -- 黑色Mac代码高亮（默认）
+        // 4. coy.css -- mix.css的备份
         echo '<link rel="stylesheet" type="text/css" href="' . $cssUrl . '" />';
     }
 
@@ -27,8 +32,8 @@ class CodePretty{
      *@return void
      */
     public static function footer() {
-        $jsUrl = 'https://wibus.gitee.io/blog-assets-goo/mix-asset/1.3.7/code_pretty/prism.js';
-        $jsUrl_clipboard = 'https://wibus.gitee.io/blog-assets-goo/mix-asset/1.3.7/code_pretty/clipboard.min.js';
+        $jsUrl = $GLOBALS['assetURL'].'code_pretty/prism.js';
+        $jsUrl_clipboard = $GLOBALS['assetURL'].'code_pretty/clipboard.min.js';
 
             echo <<<HTML
 <script type="text/javascript">
