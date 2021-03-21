@@ -1,7 +1,14 @@
 <?php
+/*
+ * @Name: Backup.php
+ * @author: Wibus
+ * @Date: 2021-03-15 23:00:33
+ * @LastEditors: Wibus
+ * @LastEditTime: 2021-03-21 10:55:19
+ */
 class Backup{
     function echoBackup(){
-
+        
         $str1 = explode('/themes/', Helper::options()->themeUrl);
         $str2 = explode('/', $str1[1]);
         $name=$str2[0];

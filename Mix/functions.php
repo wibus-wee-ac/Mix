@@ -1,4 +1,11 @@
 <?php
+/*
+ * @Name: functions.php
+ * @author: Wibus
+ * @Date: 2021-03-15 22:51:29
+ * @LastEditors: Wibus
+ * @LastEditTime: 2021-03-21 10:54:58
+ */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 $options = Typecho_Widget::widget('Widget_Options');
@@ -6,13 +13,6 @@ $options = Typecho_Widget::widget('Widget_Options');
 if (!defined('THEME_URL')){//主题目录的绝对地址
     define("THEME_URL", rtrim(preg_replace('/^'.preg_quote($options->siteUrl, '/').'/', $options->rootUrl.'/', $options->themeUrl, 1),'/').'/');
 }
-
-error_reporting(0);
-ini_set('display_errors', 0);
-
-//如果需要显示php错误打开这两行注释
-//error_reporting(E_ALL);
-//ini_set("display_errors", 1);
 
 /**
  * 主题使用必须引入的组件
