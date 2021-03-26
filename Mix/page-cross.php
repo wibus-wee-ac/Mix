@@ -71,9 +71,8 @@ function threadedComments($comments, $options)
       <div class="comment-children"><?php $comments->threadedComments($options); ?></div><?php } ?>
   </li>
 <?php } ?>
-<?php if ($this->user->hasLogin()): ?>
 <!-- 评论框 -->
-<form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" role="form">
+<form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" role="form" style="<?php if ($this->user->hasLogin()): ?><?php else: ?> display:none <?php endif;?>">
   <section class="post-form is-comment">
     <!--<h3><i class="fa fa-comments"></i>评论</h3>-->
     <div class="note-comments">
@@ -107,7 +106,6 @@ function threadedComments($comments, $options)
     </div>
   </section>
 </form>
-<?php endif; ?>
 <?php $this->comments()->to($comments); ?>
 <article class="comment-list">
   <h1><?php $this->commentsNum(_t('暂无说说'), _t('这里是说说'), _t('这里是说说')); ?></h1>
