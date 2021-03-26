@@ -5693,3 +5693,13 @@ body * {
 .display_none{
 	display: none;
 }
+.header-progress{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    
+    height: 3px;
+    border-radius: 1.5px;
+    background: linear-gradient(to right, #4cd964, #5ac8fa, #007aff);
+    transition: width 0.35s;
+}

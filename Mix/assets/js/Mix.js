@@ -120,31 +120,21 @@ if (localStorage.getItem("html_style") == 'dark') {
     console.log('小可爱之前已经调至日间模式辽～')
 }
 
-// if (NowTime >= 7 == true) {
-//     setLightStyle()
-//     console.log('早上好撒')
-// }
-// if (NowTime > 21 == true) {
-//     setDarkStyle()
-//     console.log('晚上好撒')
-// }
-
-/*
- * Pjax jQuery版本 激活菜单栏
-
- $("#btn_active").click(function(){
-    name1 = document.getElementById("header").className;
-       if(name1 == 'assets'){
-        $('#header').addClass('active');    
-    }else{
-        $('#header').removeClass('active');        
+/**
+ * 获取页面滚动条进度
+ * @method getWebScrollProgress
+ */
+     var getWebScrollProgress = function () {
+        var pageHeight = document.body.scrollHeight || document.documentElement.scrollHeight; // 页面总高度
+        // var clientHeight = $(window).height() || document.documentElement.clientHeight; // 可见区域高度
+        var clientHeight = document.documentElement.clientHeight;
+        var scrollTop = document.body.scrollTop || document.documentElement.scrollTop; //滚动的高度位置
+        var progress = Math.round(((scrollTop) / (pageHeight - clientHeight)) * 100); // 计算百分比
+        // var progressId = document.getElementById('progress');
+        document.getElementById('progress').style.width = progress + "%"
     }
-});
-$("#Header_head-menu__ofiV5").click(function(){
-    name1 = document.getElementById("header").className;
-       if(name1 != 'assets'){
-        $('#header').remoteClass('active');    
-    }
-});
-*/
+    getWebScrollProgress(); //首次加载，渲染进度条
+    window.onscroll = function() { //监听滚动事件
+        getWebScrollProgress();
+    }; 
 

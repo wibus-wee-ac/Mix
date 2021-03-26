@@ -4,9 +4,25 @@
  * @author: Wibus
  * @Date: 2021-03-15 23:00:33
  * @LastEditors: Wibus
- * @LastEditTime: 2021-03-21 10:55:19
+ * @LastEditTime: 2021-03-27 07:02:40
  */
 class Backup{
+
+    function update($v){
+        $API = 'http://api.iucky.cn/plugins/update/Mix.php';
+        $contents = file_get_contents($API);
+        $Array = json_decode($contents);
+        $ver = $Array->{'version'};
+        $mes = $Array->{'mes'};
+        if ($v != $ver) {
+            echo "<script>
+            mdui.snackbar({
+                message: 'Mix有更新了！建议立即更新哟～'
+            });
+            </script>";
+        }
+    }
+
     function echoBackup(){
         
         $str1 = explode('/themes/', Helper::options()->themeUrl);

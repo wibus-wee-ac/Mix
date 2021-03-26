@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+/*
+ * @Name: 
+ * @author: Wibus
+ * @Date: 2021-03-15 22:51:31
+ * @LastEditors: Wibus
+ * @LastEditTime: 2021-03-27 07:01:19
+ */
 <html id="html">
  <?php require_once ("Core/globals.php"); //$GLOBALS ?> 
  <head lang="zh-cn">
@@ -63,3 +70,4 @@ ks.image("img");
   </head>
 <body class="loading">
 <?php $this->options->HeaderHTML(); ?>
+<div id="progress" class="header-progress"></div>
