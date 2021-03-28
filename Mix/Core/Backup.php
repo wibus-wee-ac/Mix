@@ -4,16 +4,18 @@
  * @author: Wibus
  * @Date: 2021-03-15 23:00:33
  * @LastEditors: Wibus
- * @LastEditTime: 2021-03-27 07:02:40
+ * @LastEditTime: 2021-03-28 15:21:27
  */
 class Backup{
 
     function update($v){
-        $API = 'http://api.iucky.cn/plugins/update/Mix.php';
+        // $API = 'http://api.iucky.cn/plugins/update/Mix.php';
+        $API = 'https://api.github.com/repos/wibus-wee/Mix/releases/latest';
         $contents = file_get_contents($API);
         $Array = json_decode($contents);
-        $ver = $Array->{'version'};
-        $mes = $Array->{'mes'};
+        // $ver = $Array->{'version'};
+        // $mes = $Array->{'mes'};
+        $ver = $Array->{''};
         if ($v != $ver) {
             echo "<script>
             mdui.snackbar({

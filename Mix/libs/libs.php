@@ -276,7 +276,6 @@ class Content{
         $targetTitle = "";//标题
         $targetUrl = "";//链接
         $targetSummary = "";//简介文字
-        $targetImgSrc = "";//封面图片地址
         if (!empty($cid)) {
             $db = Typecho_Db::get();
             $prefix = $db->getPrefix();
@@ -289,17 +288,6 @@ class Content{
                 $targetTitle = "文章不存在，或文章是加密、私密文章";
             } else {
                 $result = Typecho_Widget::widget('Widget_Abstract_Contents')->push($posts[0]);
-                if ($cover == "" || $cover == "http://") {
-
-                    $thumbArray = $db->fetchAll($db
-                        ->select()->from($prefix . 'fields')
-                        ->orWhere('cid = ?', $cid)
-                        ->where('name = ? ', 'thumb'));
-                    $targetImgSrc = 'https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/EDoKvz5p7BXZ46U.png';
-
-                } else {
-                    $targetImgSrc = $cover;
-                }
                 $targetSummary = Content::excerpt(Markdown::convert($result['text']), 60);
                 $targetTitle = $result['title'];
                 $targetUrl = $result['permalink'];
@@ -313,21 +301,12 @@ class Content{
             $targetTitle = "文章不存在，请检查文章CID";
         }
 
-        $imageHtml = "";
-        $noImageCss = "";
-        if (trim($targetImgSrc) !== "") {
-            $imageHtml = '<div class="inner-image bg" style="background-image: url(' . $targetImgSrc . ');background-size: cover;"></div>
-';
-        } else {
-            $noImageCss = 'style="margin-left: 10px;"';
-        }
 
         return <<<EOF
 <div class="preview">
 <div class="post-inser post box-shadow-wrap-normal">
 <a href="{$targetUrl}" target="_blank" class="post_inser_a no-external-link">
-{$imageHtml}
-<div class="inner-content" $noImageCss>
+<div class="inner-content" style="margin-left: 10px;">
 <p class="inser-title">{$targetTitle}</p>
 <div class="inster-summary text-muted">
 {$targetSummary}
@@ -755,7 +734,7 @@ EOF;
 
         return <<<EOF
 <div class="panel panel-default collapse-panel box-shadow-wrap-lg"><div class="panel-heading panel-collapse" data-toggle="collapse" data-target="#{$id}" aria-expanded="true"><div class="accordion-toggle"><span>{$title}</span>
-<i class="pull-right fontello icon-fw fontello-angle-right"></i>
+<i class="pull-right fa fa-chevron-right"></i>
 </div>
 </div>
 <div id="{$id}" class="panel-body {$class}">

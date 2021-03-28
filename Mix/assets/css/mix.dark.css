@@ -34,3 +34,26 @@ html.dark .torTree *{
 html.dark #headnav-a{
     color: var(--brown);
 }
+html.dark .panel-default>.panel-footer, html.dark .panel-default>.panel-heading, html.dark .panel-body {
+    background: #000;
+    color: #aaa;
+}
+html.dark .panel-heading {
+    border-color: #191919;
+}
+html.dark .wrapper-lg .entry-content a:hover {
+    color: #aaa;
+}
+html.dark .box-shadow-wrap-lg {
+    -webkit-box-shadow: 0 2px 6px rgb(0 0 0 / 42%);
+    box-shadow: 0 2px 6px rgb(0 0 0 / 42%);
+}
+html.dark .post_tab .nav, html.dark .tab-container .tab-content {
+    background-color: #212121;
+}
+html.dark .b-b {
+    border-color: #252525;
+}
+html.dark .tab-container .tab-content {
+    background-color: #212121;
+}
