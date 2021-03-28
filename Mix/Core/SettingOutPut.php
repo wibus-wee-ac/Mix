@@ -4,7 +4,7 @@
  * @author: Wibus
  * @Date: 2021-03-15 22:59:46
  * @LastEditors: Wibus
- * @LastEditTime: 2021-03-21 10:54:48
+ * @LastEditTime: 2021-03-28 21:16:44
  */
 if (preg_match("/options-theme.php/", $_SERVER['REQUEST_URI'])) {
     $stylehtml = AdminSetting::styleoutput();
@@ -12,10 +12,6 @@ if (preg_match("/options-theme.php/", $_SERVER['REQUEST_URI'])) {
     echo $stylehtml;
     echo $welcome;
     if($options->debug != 2){ //如果不是开发模式的话就不屏蔽
-        $hosturl = $_SERVER['HTTP_HOST'];
-        $check_host = 'https://api.iucky.cn/plugins/update/Mix.php';
-        $check_message = $check_host . '?a=V1.4.2&u=' . $_SERVER['HTTP_HOST'];
-        $message_json = file_get_contents($check_message);
         error_reporting(0);
         ini_set('display_errors', 0);
     }elseif ($options->debug == 2) {
@@ -27,4 +23,8 @@ if (preg_match("/options-theme.php/", $_SERVER['REQUEST_URI'])) {
         error_reporting(E_ALL);
         ini_set("display_errors", 1);
     }
+    $hosturl = $_SERVER['HTTP_HOST'];
+    $check_host = 'https://api.iucky.cn/plugins/update/Mix.php';
+    $check_message = $check_host . '?a=V1.5.0&u=' . $_SERVER['HTTP_HOST'];
+    $message_json = file_get_contents($check_host);
 }

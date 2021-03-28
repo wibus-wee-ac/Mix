@@ -4,24 +4,32 @@
  * @author: Wibus
  * @Date: 2021-03-15 23:00:33
  * @LastEditors: Wibus
- * @LastEditTime: 2021-03-28 15:21:27
+ * @LastEditTime: 2021-03-28 21:19:51
  */
 class Backup{
 
     function update($v){
-        // $API = 'http://api.iucky.cn/plugins/update/Mix.php';
         $API = 'https://api.github.com/repos/wibus-wee/Mix/releases/latest';
-        $contents = file_get_contents($API);
-        $Array = json_decode($contents);
-        // $ver = $Array->{'version'};
-        // $mes = $Array->{'mes'};
-        $ver = $Array->{''};
+        $message_json = file_get_contents($API);
+        // $ver = $message_json->{'version'};
+        // $mes = $message_json->{'mes'};
+        $ver = $message_json->{'tag_name'};
+        $mes = $message_json->{'body'}; //内容
         if ($v != $ver) {
-            echo "<script>
+            echo <<<EOF
+            <script>
             mdui.snackbar({
-                message: 'Mix有更新了！建议立即更新哟～'
-            });
-            </script>";
+                message: 'Mix有更新了！建议立即更新哟～',
+                buttonText: '更新内容',
+                onClick: function(){
+                  mdui.alert('{$mes}');
+                },
+                onButtonClick: function(){
+                  mdui.alert('{$mes}');
+                },
+              });
+            </script>
+EOF;
         }
     }
 

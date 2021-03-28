@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+/*
+ * @Name: 
+ * @author: Wibus
+ * @Date: 2021-03-15 22:51:31
+ * @LastEditors: Wibus
+ * @LastEditTime: 2021-03-28 21:27:56
+ */
 <html id="html">
  <?php require_once ("Core/globals.php"); //$GLOBALS ?> 
  <head lang="zh-cn">
@@ -20,6 +27,7 @@
   <!--<link href="<?php echo $GLOBALS['assetURL'] ?>kico.css" rel="stylesheet" type="text/css">-->
     <script src="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Kico-Style/kico.min.js"></script>
 <script src="<?php echo $GLOBALS['assetURL'] ?>js/pre.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 ks.image("img");
 </script>
@@ -52,7 +60,7 @@ ks.image("img");
   <?php $this->header(); ?>
   <script>
     window.MIX_CONFIG = {
-      VERSION: '1.4.2',
+      VERSION: '1.5.0',
       <?php if ($this->options->sideBarStyle == 1):?>
       SIDEBAR: 1,
       <?php elseif ($this->options->sideBarStyle == 2):?>
