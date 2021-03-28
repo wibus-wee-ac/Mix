@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-/*
- * @Name: 
- * @author: Wibus
- * @Date: 2021-03-15 22:51:31
- * @LastEditors: Wibus
- * @LastEditTime: 2021-03-28 21:27:56
- */
 <html id="html">
  <?php require_once ("Core/globals.php"); //$GLOBALS ?> 
  <head lang="zh-cn">
