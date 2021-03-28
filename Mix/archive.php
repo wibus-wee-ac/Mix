@@ -21,6 +21,11 @@ $this->need('component/headnav/new_headnav.php');
 
 <div  id="main_load">
 <main  class="is-article" id="article-wrap">
+
+<?php 
+if ($this->options->sideBarStyle == 2) {$this->need('component/sidebar.php');}
+?>
+
     <section class="post-title">
         <h1>
             <div>
