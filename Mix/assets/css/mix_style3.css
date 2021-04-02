@@ -253,3 +253,65 @@ ul.nav.no-padder.b-b{
     font-size: 24px;
 }
 
+pre {
+    padding: 0;
+}
+code[class*="language-"], pre[class*="language-"]{
+    font-size: 13px!important;
+}
+
+#write p{
+    margin: 0 0 20px 0;
+}
+
+#write h1:after, #write h2:after, #write h3:after, #write h4:after, #write h5::before, #write h6::before {
+    display: block;
+    content: "";
+    margin-bottom: 10px;
+}
+#write h1::before, #write h2::before, #write h3::before, #write h4::before, #write h5::before, #write h6::before {
+    display: block;
+    content: "";
+    margin-top: 10px;
+}
+
+/* 元素ID类 */
+
+@media (max-width: 600px){
+    #write {
+        margin-bottom: 20px;
+        background-color: #fff;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+        box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+        transition: all .2s ease;
+        border-radius: 6px;
+        border: none;
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
+/* 优化SCUI */
+
+.Scode-Red, .Scode-Blue, .Scode-Pink, .Scode-Pink-Pro, .Scode-Green, .Scode-zise{
+    margin-top: 29px;
+    margin-bottom: 29px;
+}
+.Scode-mhz{
+    margin-top: 29px;
+    margin-bottom: 29px;
+}
+.Scode-tkzj{
+    margin-top: 29px;
+    margin-bottom: 29px;
+}
+.Scode-yyz{
+    margin-top: 29px;
+    margin-bottom: 29px;
+}
+.Scode-xty{
+    margin-top: 29px;
+    margin-bottom: 29px;
+}

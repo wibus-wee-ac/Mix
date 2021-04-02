@@ -42,6 +42,7 @@
   <link rel="stylesheet" href="<?php echo $GLOBALS['assetURL'] ?>css/style2.css" data-n-p="">
   <link rel="stylesheet" href="<?php echo $GLOBALS['assetURL'] ?>css/fa-svg.css" data-n-p="">
   <link href="<?php echo $GLOBALS['assetURL'] ?>css/other.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo $GLOBALS['assetURL'] ?>css/mix_style3.css" rel="stylesheet" type="text/css">
   <!-- <link href="<?php echo $GLOBALS['assetURL'] ?>css/OperatorMono.css" rel="stylesheet" type="text/css"> -->
   <link href="<?php echo $GLOBALS['assetURL'] ?>css/comment.css" rel="stylesheet" type="text/css">
 <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">

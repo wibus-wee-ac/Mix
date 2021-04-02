@@ -57,3 +57,10 @@ html.dark .b-b {
 html.dark .tab-container .tab-content {
     background-color: #212121;
 }
+html.dark #write{
+    background-color: transparent;
+}
+
+html.dark #write h1, html.dark #write h2, html.dark #write h3, html.dark #write h4 {
+    background: linear-gradient(to bottom,transparent 60%,rgba(0,0,0,.39) 0) no-repeat;
+}
