@@ -46,6 +46,8 @@
   <!-- <link href="<?php echo $GLOBALS['assetURL'] ?>css/OperatorMono.css" rel="stylesheet" type="text/css"> -->
   <link href="<?php echo $GLOBALS['assetURL'] ?>css/comment.css" rel="stylesheet" type="text/css">
 <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> -->
 
 <script>
 const SQP = new SQP_Extend();
@@ -103,7 +105,6 @@ document.addEventListener('pjax:complete', function () {
       <?php $this->options->PjaxReLoad(); ?>
       SQP.init(); //重载 SQP
       ks.image("img"); // 重载 Kico Style 的图片灯箱
-      
       if (typeof Prism !== 'undefined') {
 var pres = document.getElementsByTagName('pre');
                 for (var i = 0; i < pres.length; i++){
@@ -118,7 +119,7 @@ document.getElementById("close").onclick = function(){
 }
   });
 </script>
-
+<script>ks.image("img");</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 

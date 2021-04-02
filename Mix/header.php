@@ -21,9 +21,6 @@
     <script src="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Kico-Style/kico.min.js"></script>
 <script src="<?php echo $GLOBALS['assetURL'] ?>js/pre.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-ks.image("img");
-</script>
   <style><?php $this->options->CSS(); ?></style>
   <?php if($this->options->BackGroundImage):?>
   <style>

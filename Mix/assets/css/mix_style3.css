@@ -315,3 +315,226 @@ code[class*="language-"], pre[class*="language-"]{
     margin-top: 29px;
     margin-bottom: 29px;
 }
+
+/* 针对fancybox优化 */
+
+.fancybox-morphing .fancybox-bg {
+	background: #e0d8c8;
+	opacity: 1
+}
+
+.fancybox-morphing .fancybox-toolbar {
+	top: 20px;
+	right: 40px
+}
+
+.fancybox-morphing .fancybox-button--close {
+	background: rgba(0,0,0,.2);
+	border-radius: 50%;
+	color: #fff
+}
+
+.fancybox-morphing .fancybox-button--close::after,.fancybox-morphing .fancybox-button--close::before {
+	height: 1.55px;
+	width: 22px;
+	left: calc(50% - 11px)
+}
+
+.fancybox-morphing .fancybox-button--close:hover {
+	background: rgba(0,0,0,.25)
+}
+
+#morphing-content {
+	width: 100%;
+	margin: 0;
+	position: relative;
+	background: #f8f1e2;
+	color: #4f321c;
+	padding: 0;
+	line-height: 2;
+	z-index: 9999;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	min-height: 100%;
+	font-size: 18px;
+	font-weight: 400!important;
+	font-style: normal!important;
+	box-shadow: 0 6px 12px 3px rgba(0,0,0,.2)
+}
+
+.fancybox-slide--html {
+	padding: 0!important
+}
+
+.fancybox-container #morphing-content {
+	display: inline-block!important
+}
+
+.fancybox-container img {
+	margin: 0 auto
+}
+
+@media (max-width:1199px) {
+	.fancybox-container #morphing-content {
+		padding-bottom: 30px
+	}
+}
+
+/* 相册 */
+
+.album-photos {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-transition: .2s cubic-bezier(.25,.46,.45,.94) all;
+	transition: .2s cubic-bezier(.25,.46,.45,.94) all;
+	margin: 10px 0
+}
+
+.album-photos .light-link:after {
+	background-image: -moz-linear-gradient(to top,rgba(10,17,25,.35) 5%,rgba(10,17,25,0) 35%);
+	background-image: -webkit-linear-gradient(to top,rgba(10,17,25,.35) 5%,rgba(10,17,25,0) 35%);
+	background-image: -ms-linear-gradient(to top,rgba(10,17,25,.35) 5%,rgba(10,17,25,0) 35%);
+	background-image: linear-gradient(to top,rgba(10,17,25,.35) 5%,rgba(10,17,25,0) 35%);
+	-moz-pointer-events: none;
+	-webkit-pointer-events: none;
+	-ms-pointer-events: none;
+	pointer-events: none;
+	background-size: cover;
+	content: '';
+	display: block;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0
+}
+
+.album-photos figure {
+	position: relative;
+	clear: both;
+	outline: 0;
+	padding: 0;
+	min-height: 100px;
+	margin: 2.5px;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1
+}
+
+.post-img-figcaption {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 100%;
+	text-align: center;
+	color: #8e8787;
+	margin-top: 13px
+}
+
+.album-photos figure figcaption {
+	width: 100%;
+	line-height: 32px;
+	max-height: 32px;
+	overflow: hidden;
+	word-wrap: break-word;
+	pointer-events: none;
+	bottom: 5px;
+	font-size: .8em;
+	margin: 0;
+	position: absolute;
+	z-index: 1;
+	color: #fff;
+	padding: 0 10px;
+	transition: .4s ease;
+	text-align: center
+}
+
+.album-photos figure:hover figcaption {
+	bottom: 20px;
+	transition: .4s ease
+}
+
+.album-photos img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	margin: 0!important;
+	top: 0;
+	left: 0;
+	max-width: 100%!important
+}
+
+.album-photos figure a[data-fancybox=gallery] {
+	display: block;
+	position: relative;
+	max-width: 100%;
+	height: 100%;
+	padding: 0
+}
+
+.image-thumb {
+	height: 0;
+	padding-bottom: 30%
+}
+
+@media screen and (max-width:1200px) {
+	.album-thumb {
+		width: 45%
+	}
+
+	.image-thumb {
+		margin: 5px
+	}
+}
+
+@media screen and (max-width:500px) {
+	.album-thumb {
+		width: 44%
+	}
+
+	.album-thumb:after,.album-thumb:before {
+		bottom: 20px
+	}
+
+	.image-thumb {
+		margin: 0;
+		border: none;
+		width: 92%;
+		padding-bottom: 70%
+	}
+}
+
+@media screen and (max-width:500px) {
+	.image-thumb {
+		border: none;
+		margin: 10px 10px
+	}
+}
+
+@media screen and (max-width:370px) {
+	.album-thumb {
+		width: 40%
+	}
+}
+
+@media screen and (max-width:350px) {
+	.album-thumb {
+		width: 85%
+	}
+
+	.albums {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap
+	}
+}
+
+.comment-list {
+	margin-bottom: 0!important;
+	padding-left: 0;
+	list-style: none
+}
