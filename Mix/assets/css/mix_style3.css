@@ -516,7 +516,33 @@ code[class*="language-"], pre[class*="language-"]{
 		flex-wrap: wrap
 	}
 }
-
+.album-thumb, .image-thumb {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+    float: left;
+    height: 132px;
+    margin: 10px;
+    padding: 0 0 0;
+    position: relative;
+    cursor: pointer;
+    align-items: flex-end;
+    border-radius: 6px;
+}
+.image-thumb {
+    overflow: hidden;
+}
+.image-thumb {
+    height: 0;
+    padding-bottom: 30%;
+}
+.albums, .photos {
+    display: inline-block;
+    width: 100%;
+}
 
 /* 头部进度条 */
 

@@ -5,7 +5,6 @@
     nav#Header_head-menu__ofiV5 {
         background: url(https://gitee.com/xun7788/my-imagination/raw/master/cdn/background-night.png) top fixed
     }
-}
 
 .Message_wrap__3GJT3 {
 	display: block;
@@ -4321,7 +4320,7 @@ pre,pre>code {
 	padding: 0
 }
 
-/* #write.focus:before {
+#write.focus:before {
 	content: "";
 	position: absolute;
 	z-index: -1;
@@ -4334,7 +4333,7 @@ pre,pre>code {
 	padding: 30px 50px 10px;
 	background-color: var(--light-bg);
 	border-radius: 1.5em
-} */
+}
 
 #write.focus .paul-lister {
 	right: -55px
@@ -4845,13 +4844,13 @@ html.dark :not(pre)>code {
 	background: hsla(0,0%,50.2%,.2)
 }
 
-/* #write h1,#write h2,#write h3,#write h4,#write h5,#write h6 {
+#write h1,#write h2,#write h3,#write h4,#write h5,#write h6 {
 	font-weight: 700;
 	line-height: 1.25;
 	vertical-align: baseline
-} */
+}
 
-/* #write h1:before,#write h2:before,#write h3:before,#write h4:before,#write h5:before,#write h6:before {
+#write h1:before,#write h2:before,#write h3:before,#write h4:before,#write h5:before,#write h6:before {
 	border: 0!important;
 	border-radius: 0!important;
 	position: static!important;
@@ -4902,7 +4901,7 @@ html.dark :not(pre)>code {
 	#write h1,#write h2,#write h3,#write h4,#write h5,#write h6 {
 		margin-left: 2rem
 	}
-} */
+}
 
 #write ol,#write ul {
 	padding-left: 2em;
@@ -5585,6 +5584,7 @@ template {
 		transform: rotate(1turn)
 	}
 }
+/* 表格类 */
 
 @keyframes LampSwitch_rotating__3dBFQ {
 	0% {
@@ -5598,6 +5598,12 @@ template {
 		-moz-transform: rotate(1turn);
 		transform: rotate(1turn)
 	}
+table{
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-radius: 5px;
+    font-size: 14px;
 }
 
 .LampSwitch_sakura-img__3BGwE {
@@ -5606,6 +5612,11 @@ template {
 	width: 24px;
 	background-size: cover;
 	left: 50%
+table{
+    border: 0;
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
 }
 
 .Header_drawer__iQn1p.Header_show__3R4Sq {
@@ -5648,23 +5659,34 @@ template {
 }
 .pb-4 {
 	padding-bottom: 2rem;
+table th, table td{
+    padding: .75em;
+    text-align: left;
+    vertical-align: top;
 }
 
 body * {
 	-webkit-transition: color .1s ease-in, background .1s ease-in, border .1s ease-in;
 	transition: color .1s ease-in, background .1s ease-in, border .1s ease-in;
 }
+table > thead > tr{ border-bottom: 2px solid #ccc }
+table > tbody > tr{ border-bottom: 1px solid #ddd }
+table > tbody > tr:last-child{ border-bottom: 0 }
 
 .Header_drawer__iQn1p .Header_children__2ZydX,
 .Header_drawer__iQn1p .Header_parent__3EA6A {
 	padding-top: .5rem;
 	padding-bottom: .5rem;
+table > tbody > tr{
+    transition: background .3s;
 }
 
 .Header_drawer__iQn1p .Header_parent__3EA6A {
 	font-weight: 500;
 	font-size: 1.25rem;
 	line-height: 2rem;
+table > tbody > tr:hover{
+    background: #eee;
 }
 
 .Header_drawer__iQn1p a {
@@ -5692,4 +5714,18 @@ body * {
 }
 .display_none{
 	display: none;
+}
+.header-progress{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    
+    height: 3px;
+    border-radius: 1.5px;
+    background: linear-gradient(to right, #4cd964, #5ac8fa, #007aff);
+    transition: width 0.35s;
+}	
+table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th,
+table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td{
+    white-space: nowrap;
 }
