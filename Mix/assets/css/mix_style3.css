@@ -392,7 +392,6 @@ code[class*="language-"], pre[class*="language-"]{
 	transition: .2s cubic-bezier(.25,.46,.45,.94) all;
 	margin: 10px 0
 }
-
 .album-photos .light-link:after {
 	background-image: -moz-linear-gradient(to top,rgba(10,17,25,.35) 5%,rgba(10,17,25,0) 35%);
 	background-image: -webkit-linear-gradient(to top,rgba(10,17,25,.35) 5%,rgba(10,17,25,0) 35%);
@@ -411,7 +410,6 @@ code[class*="language-"], pre[class*="language-"]{
 	height: 100%;
 	top: 0
 }
-
 .album-photos figure {
 	position: relative;
 	clear: both;
@@ -423,7 +421,6 @@ code[class*="language-"], pre[class*="language-"]{
 	-ms-flex: 1;
 	flex: 1
 }
-
 .post-img-figcaption {
 	font-style: normal;
 	font-weight: 400;
@@ -433,7 +430,6 @@ code[class*="language-"], pre[class*="language-"]{
 	color: #8e8787;
 	margin-top: 13px
 }
-
 .album-photos figure figcaption {
 	width: 100%;
 	line-height: 32px;
@@ -451,12 +447,10 @@ code[class*="language-"], pre[class*="language-"]{
 	transition: .4s ease;
 	text-align: center
 }
-
 .album-photos figure:hover figcaption {
 	bottom: 20px;
 	transition: .4s ease
 }
-
 .album-photos img {
 	position: absolute;
 	width: 100%;
@@ -467,7 +461,6 @@ code[class*="language-"], pre[class*="language-"]{
 	left: 0;
 	max-width: 100%!important
 }
-
 .album-photos figure a[data-fancybox=gallery] {
 	display: block;
 	position: relative;
@@ -475,7 +468,6 @@ code[class*="language-"], pre[class*="language-"]{
 	height: 100%;
 	padding: 0
 }
-
 .image-thumb {
 	height: 0;
 	padding-bottom: 30%
@@ -485,21 +477,17 @@ code[class*="language-"], pre[class*="language-"]{
 	.album-thumb {
 		width: 45%
 	}
-
 	.image-thumb {
 		margin: 5px
 	}
 }
-
 @media screen and (max-width:500px) {
 	.album-thumb {
 		width: 44%
 	}
-
-	.album-thumb:after,.album-thumb:before {
+    .album-thumb:after,.album-thumb:before {
 		bottom: 20px
 	}
-
 	.image-thumb {
 		margin: 0;
 		border: none;
@@ -507,25 +495,21 @@ code[class*="language-"], pre[class*="language-"]{
 		padding-bottom: 70%
 	}
 }
-
 @media screen and (max-width:500px) {
 	.image-thumb {
 		border: none;
 		margin: 10px 10px
 	}
 }
-
 @media screen and (max-width:370px) {
 	.album-thumb {
 		width: 40%
 	}
 }
-
 @media screen and (max-width:350px) {
 	.album-thumb {
 		width: 85%
 	}
-
 	.albums {
 		display: flex;
 		justify-content: center;
@@ -533,8 +517,15 @@ code[class*="language-"], pre[class*="language-"]{
 	}
 }
 
-.comment-list {
-	margin-bottom: 0!important;
-	padding-left: 0;
-	list-style: none
+
+/* 头部进度条 */
+
+.header-progress{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    height: 3px;
+    border-radius: 1.5px;
+    background: linear-gradient(to right, #4cd964, #5ac8fa, #007aff);
+    transition: width 0.35s;
 }

@@ -4,7 +4,7 @@
  * @author: Wibus
  * @Date: 2021-03-15 22:59:46
  * @LastEditors: Wibus
- * @LastEditTime: 2021-03-28 21:16:44
+ * @LastEditTime: 2021-04-03 08:08:50
  */
 if (preg_match("/options-theme.php/", $_SERVER['REQUEST_URI'])) {
     $stylehtml = AdminSetting::styleoutput();
@@ -26,5 +26,5 @@ if (preg_match("/options-theme.php/", $_SERVER['REQUEST_URI'])) {
     $hosturl = $_SERVER['HTTP_HOST'];
     $check_host = 'https://api.iucky.cn/plugins/update/Mix.php';
     $check_message = $check_host . '?a=V1.5.0&u=' . $_SERVER['HTTP_HOST'];
-    $message_json = file_get_contents($check_host);
+    $message_json = file_get_contents($check_message);
 }
