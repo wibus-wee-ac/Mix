@@ -4,7 +4,7 @@
  * @author: Wibus
  * @Date: 2021-03-15 22:51:31
  * @LastEditors: Wibus
- * @LastEditTime: 2021-03-21 13:11:27
+ * @LastEditTime: 2021-04-03 10:44:55
  */
 
 	/**
@@ -16,12 +16,27 @@
 
 <!--头部必要元素-->
 <?php $this->need('header.php'); ?>
+<script>
+    function getURL(url){
+    $.ajax({
+        url: 'https://bird.ioliu.cn/v2/?url='+url,
+        type: 'GET',
+        complete: function(response) {
+            if(response.status == 200) {
+                alert('有效');
+            } else {
+                alert('无效');
+            }
+        }
+    });
+}
+</script>
 
 <?php 
 if ($this->options->headNavStyle == 1){
-$this->need('component/headnav/headnav.php'); 
+    $this->need('component/headnav/headnav.php'); 
 }else if ($this->options->headNavStyle == 2){
-$this->need('component/headnav/new_headnav.php'); 
+    $this->need('component/headnav/new_headnav.php'); 
 }
 ?>
 <style>

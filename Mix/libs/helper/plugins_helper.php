@@ -17,12 +17,13 @@ class CodePretty{
      *@return void
      */
     public static function header() {
-        $cssUrl = $GLOBALS['assetURL'].'code_pretty/styles/BlackMac.css';
+        $cssUrl = $GLOBALS['assetURL'].'code_pretty/styles/Mac.css';
         // 自带CSS列表：
         // 1. mix.css -- 白色无边框
         // 2. WhiteMac.css -- 白色Mac代码高亮
-        // 3. BlackMac.css -- 黑色Mac代码高亮（默认）
+        // 3. BlackMac.css -- 黑色Mac代码高亮
         // 4. coy.css -- mix.css的备份
+        // 5. Mac.css -- 白色（日间）黑色（夜间）Mac代码高亮（默认，推荐！）
         echo '<link rel="stylesheet" type="text/css" href="' . $cssUrl . '" />';
     }
 
