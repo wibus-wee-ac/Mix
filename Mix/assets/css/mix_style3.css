@@ -275,6 +275,12 @@ code[class*="language-"], pre[class*="language-"]{
     margin-top: 10px;
 }
 
+#write {
+    font-family: -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
 /* 元素ID类 */
 
 @media (max-width: 600px){

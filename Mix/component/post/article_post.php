@@ -64,3 +64,4 @@
     // })
     // typing.start()
 </script> 
+<script>ks.image("img");</script>
