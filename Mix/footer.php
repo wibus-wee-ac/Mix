@@ -46,6 +46,7 @@
   <!-- <link href="<?php echo $GLOBALS['assetURL'] ?>css/OperatorMono.css" rel="stylesheet" type="text/css"> -->
   <link href="<?php echo $GLOBALS['assetURL'] ?>css/comment.css" rel="stylesheet" type="text/css">
 <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="<?php echo $GLOBALS['assetURL']?>js/OwO.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> -->
 

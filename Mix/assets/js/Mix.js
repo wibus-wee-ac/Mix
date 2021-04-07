@@ -137,3 +137,18 @@ if (localStorage.getItem("html_style") == 'dark') {
     window.onscroll = function() { //监听滚动事件
         getWebScrollProgress();
     }; 
+
+
+function InitOwO () {
+        if (document.getElementById('OwO') !== null) {
+            new OwO({
+                logo: 'OwO表情',
+                container: document.getElementById('OwO'),
+                target: document.getElementById('comment-textarea'),
+                position: 'down',
+                width: '100%',
+                maxHeight: '250px',
+                api: window.MIX_CONFIG.STATIC_PATH + 'emoji/emoji.json'
+            });
+        }
+    }

@@ -25,6 +25,9 @@ if ($this->options->sideBarStyle == 2) {$this->need('component/sidebar.php');}
 <?php elseif ($PostChoice == 1): ?>
 <div  id="main_load">
 <main class="is-article is-note post-content paul-note" >
+<?php 
+if ($this->options->sideBarStyle == 2) {$this->need('component/sidebar.php');}
+?>
 <?php $this->need('component/post/dairy_post.php'); ?>
 </main>
 </div>

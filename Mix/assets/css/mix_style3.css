@@ -398,23 +398,22 @@ code[class*="language-"], pre[class*="language-"]{
 	transition: .2s cubic-bezier(.25,.46,.45,.94) all;
 	margin: 10px 0
 }
-.album-photos .light-link:after {
-	background-image: -moz-linear-gradient(to top,rgba(10,17,25,.35) 5%,rgba(10,17,25,0) 35%);
-	background-image: -webkit-linear-gradient(to top,rgba(10,17,25,.35) 5%,rgba(10,17,25,0) 35%);
-	background-image: -ms-linear-gradient(to top,rgba(10,17,25,.35) 5%,rgba(10,17,25,0) 35%);
-	background-image: linear-gradient(to top,rgba(10,17,25,.35) 5%,rgba(10,17,25,0) 35%);
-	-moz-pointer-events: none;
-	-webkit-pointer-events: none;
-	-ms-pointer-events: none;
-	pointer-events: none;
-	background-size: cover;
-	content: '';
-	display: block;
-	left: 0;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0
+.album-photos :after {
+    background-image: -moz-linear-gradient(to top,rgba(10,17,25,.35) 5%,rgba(10,17,25,0) 40%);
+    background-image: -webkit-linear-gradient(to top,rgba(10,17,25,.35) 5%,rgba(10,17,25,0) 40%);
+    background-image: -ms-linear-gradient(to top,rgba(10,17,25,.35) 5%,rgba(10,17,25,0) 40%);
+    background-image: linear-gradient(to top,rgba(10,17,25,.35) 5%,rgba(10,17,25,0) 40%);
+    -moz-pointer-events: none;
+    -webkit-pointer-events: none;
+    -ms-pointer-events: none;
+    pointer-events: none;
+    background-size: cover;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 .album-photos figure {
 	position: relative;
