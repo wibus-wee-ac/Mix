@@ -13,12 +13,28 @@ $options = Typecho_Widget::widget('Widget_Options');
 if (!defined('THEME_URL')){//主题目录的绝对地址
     define("THEME_URL", rtrim(preg_replace('/^'.preg_quote($options->siteUrl, '/').'/', $options->rootUrl.'/', $options->themeUrl, 1),'/').'/');
 }
-
+if (!defined("BLOG_URL")){
+    define("BLOG_URL",$options->rootUrl."/");
+}
+if ($options->rewrite == 1){//定义博客php的地址，判断是否开启了伪静态
+    if(!defined('BLOG_URL_PHP'))
+        define("BLOG_URL_PHP",BLOG_URL);
+}else{
+    if(!defined('BLOG_URL_PHP'))
+        define("BLOG_URL_PHP",BLOG_URL.'index.php/');
+}
+// if (!defined("THEME_FILE")){
+//     define("THEME_FILE",total::returnThemePath());
+// }
+if (!defined("STATIC_PATH")){
+    define('STATIC_PATH',''.$GLOBALS['assetURL'].'');
+}
 /**
  * 主题使用必须引入的组件
  */
 require("libs/libs.php"); //最主要依赖
 require("libs/Utils.php"); //Utils，在libs.php中需要使用
+require("Core/globals.php");
 
 /**
  * Helper类
