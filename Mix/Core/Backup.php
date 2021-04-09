@@ -8,18 +8,19 @@
  */
 class Backup{
 
-    function update($v){
-        $API = 'https://api.github.com/repos/wibus-wee/Mix/releases/latest';
-        $message_json = file_get_contents($API);
+    static function update($v){
+        $API = 'https://bird.ioliu.cn/v2/?url=https://api.github.com/repos/wibus-wee/Mix/releases/latest';
+        $message = file_get_contents($API);
+        $message_json = json_decode($message);
         // $ver = $message_json->{'version'};
         // $mes = $message_json->{'mes'};
         $ver = $message_json->{'tag_name'};
-        $mes = $message_json->{'body'}; //内容
+        $mes = $message_json->{'url'}; //内容
         if ($v != $ver) {
             echo <<<EOF
             <script>
             mdui.snackbar({
-                message: 'Mix有更新了！建议立即更新哟～',
+                message: 'Mix更新{$ver}了！建议立即更新哟～',
                 buttonText: '更新内容',
                 onClick: function(){
                   mdui.alert('{$mes}');
@@ -33,7 +34,7 @@ EOF;
         }
     }
 
-    function echoBackup(){
+    static function echoBackup(){
         
         $str1 = explode('/themes/', Helper::options()->themeUrl);
         $str2 = explode('/', $str1[1]);

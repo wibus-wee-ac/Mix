@@ -1,13 +1,6 @@
 <style>
-/*
- * @Name: show_article.php
- * @author: Wibus
- * @Date: 2021-03-15 22:51:40
- * @LastEditors: Wibus
- * @LastEditTime: 2021-04-04 12:33:55
- */
     .wrap.min {
-        max-width: none;
+        max-width: 800px;
     }
     .show-article {
         margin-top: 50px!important;
@@ -24,7 +17,7 @@
 <?php while($this->next()): ?>
         <div class="wrap min show-article" style="animation: <?php $this->options->IndexAction()?>">
             <h2><?php $this->title() ?></h2>
-            <p><?php $this->excerpt(300, '...'); ?></p>
+            <p style="color: rgba(0, 2, 0, 0.199);"><?php $this->excerpt(300, '...'); ?></p>
             <a class="btn yellow" href="<?php $this->permalink() ?>">阅读全文</a>
 </div>
 <?php $this->pageLink('下一页','next'); ?>

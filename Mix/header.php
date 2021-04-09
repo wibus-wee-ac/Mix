@@ -51,12 +51,11 @@
   <script>
     window.MIX_CONFIG = {
       VERSION: '1.5.0',
-      SIDEBAR: <?php $this->options->sideBarStyle(); ?>,
-      THEME_URL: '<?php echo THEME_URL; ?>',
-      THEME_FILE: '<?php echo THEME_FILE; ?>',
-      BLOG_URL: '<?php echo BLOG_URL; ?>',
-      BLOG_URL_PHP: '<?php echo BLOG_URL_PHP; ?>',
-      STATIC_PATH: '<?php echo STATIC_PATH; ?>',
+      <?php if ($this->options->sideBarStyle == 1):?>
+      SIDEBAR: 1,
+      <?php elseif ($this->options->sideBarStyle == 2):?>
+      SIDEBAR: 2,
+      <?php endif;?>
     }
   </script>
   </head>

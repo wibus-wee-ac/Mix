@@ -12,14 +12,4 @@ if ($GLOBALS['options']->UseCDNAssets) {
 }else{
     $GLOBALS['assetURL'] = $GLOBALS['options']->themeUrl.'/assets/';
 }
-
-class total{
-    public static function returnThemePath()
-    {
-        $DIRECTORY_SEPARATOR = "/";
-        $childDir = $DIRECTORY_SEPARATOR . 'usr' . $DIRECTORY_SEPARATOR . 'themes' . $DIRECTORY_SEPARATOR . 'Mix'
-            . $DIRECTORY_SEPARATOR;
-        $dir = __TYPECHO_ROOT_DIR__ . $childDir;
-        return $dir;
-    }
-}
+?>

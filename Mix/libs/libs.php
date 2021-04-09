@@ -217,25 +217,25 @@ class Content{
             $pattern = self::get_shortcode_regex(array('scode'));
             $content = preg_replace("/$pattern/", '', $content);
         }
-        if (strpos($content, '[button') !== false) {
-            $pattern = self::get_shortcode_regex(array('button'));
-            $content = preg_replace("/$pattern/", '', $content);
-        }
+        // if (strpos($content, '[button') !== false) {
+        //     $pattern = self::get_shortcode_regex(array('button'));
+        //     $content = preg_replace("/$pattern/", '', $content);
+        // }
         //排除回复可见的短代码
         if (strpos($content, '[hide') !== false) {
             $pattern = self::get_shortcode_regex(array('hide'));
             $content = preg_replace("/$pattern/", '', $content);
         }
         if (strpos($content, '[see') !== false) {
-            $pattern = self::get_shortcode_regex(array('see'));
+            $pattern = self::get_shortcode_regex(array('hide'));
             $content = preg_replace("/$pattern/", '', $content);
         }
         if (strpos($content, '[bplayer') !== false) {
-            $pattern = self::get_shortcode_regex(array('bplayer'));
+            $pattern = self::get_shortcode_regex(array('hide'));
             $content = preg_replace("/$pattern/", '', $content);
         }
         if (strpos($content, '[bilibili') !== false) {
-            $pattern = self::get_shortcode_regex(array('bilibili'));
+            $pattern = self::get_shortcode_regex(array('hide'));
             $content = preg_replace("/$pattern/", '', $content);
         }
         // //排除文档助手
@@ -680,19 +680,7 @@ EOF;
 <button class="btn {$color}" onclick='{$linkUrl}'>{$matches[5]}</button>
 EOF;
     }
-    public static function emojiParseCallback($matches)
-    {
-        $emotionPathPrefix = THEME_FILE . 'assets/img/emotion';
-        $emotionUrlPrefix = STATIC_PATH . 'img/emotion';
-        $path = $emotionPathPrefix . '/' . @$matches[1] . '/' . @$matches[2] . '.png';
-        $url = $emotionUrlPrefix . '/' . @$matches[1] . '/' . @$matches[2] . '.png';
-        //检查图片文件是否存在
-        if (is_file($path) == true) {
-            return '<img src="' . $url . '" class="emotion-' . @$matches[1] . '">';
-        } else {
-            return @$matches[0];
-        }
-    }
+
     /**
      * 进度条解析
      * @param $matches
@@ -841,9 +829,6 @@ EOF;
             $pattern = self::get_shortcode_regex(array('load'));
             $content = Utils::handle_preg_replace_callback("/$pattern/", array('Content', 'loadCallback'), $content);
         }
-        //解析文章中的表情短代码
-        $content = Utils::handle_preg_replace_callback('/::([^:\s]*?):([^:\s]*?)::/sm', array('Content', 'emojiParseCallback'),
-            $content);
         return $content;
     }
 
