@@ -13,7 +13,7 @@
 ## 关于主题
 
 - 最新版本：1.5.0
-- 上次更新：2021-3-13
+- [![wakatime](https://wakatime.com/badge/github/wibus-wee/Mix.svg)](https://wakatime.com/badge/github/wibus-wee/Mix)
 
 ## 主题特色
 
