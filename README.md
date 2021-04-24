@@ -1,6 +1,6 @@
 > Mix Pro is Developing! 敬请期待Mix Pro～
 > 本项目将会持续更新哒！
-> - [![wakatime](https://wakatime.com/badge/github/wibus-wee/Mix.svg)](https://wakatime.com/badge/github/wibus-wee/Mix)
+> [![wakatime](https://wakatime.com/badge/github/wibus-wee/Mix.svg)](https://wakatime.com/badge/github/wibus-wee/Mix)
 
 ## Mix `Double space mixture`
 
