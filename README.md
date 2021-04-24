@@ -2,7 +2,7 @@
 > 
 > 本项目将会持续更新哒！
 > 
-> [![wakatime](https://wakatime.com/badge/github/wibus-wee/Mix.svg)](https://wakatime.com/badge/github/wibus-wee/Mix)
+> [![wakatime](https://wakatime.com/badge/github/wibus-wee/Mix-Message.svg)](https://wakatime.com/badge/github/wibus-wee/Mix-Message)
 
 ## Mix `Double space mixture`
 
@@ -17,7 +17,6 @@
 ## 关于主题
 
 - 最新版本：1.5.0
-- [![wakatime](https://wakatime.com/badge/github/wibus-wee/Mix-Message.svg)](https://wakatime.com/badge/github/wibus-wee/Mix-Message)
 
 ## 主题特色
 
