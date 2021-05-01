@@ -1,9 +1,3 @@
-> Mix Pro is Developing! 敬请期待Mix Pro～
-> 
-> 本项目将会持续更新哒！
-> 
-> [![wakatime](https://wakatime.com/badge/github/wibus-wee/Mix-Message.svg)](https://wakatime.com/badge/github/wibus-wee/Mix-Message)
-
 ## Mix `Double space mixture`
 
 ![3A885E7D48BB9DFA285D9003C3C7AFD9](https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210217163055.jpg)
@@ -16,7 +10,8 @@
 
 ## 关于主题
 
-- 最新版本：1.5.0
+- 最新版本：1.5.0 [![wakatime](https://wakatime.com/badge/github/wibus-wee/Mix-Message.svg)](https://wakatime.com/badge/github/wibus-wee/Mix-Message)
+- 鸣谢：[@QingChiXiaoYe](https://github.com/QingChiXiaoYe), [@Musenxi](https://github.com/Musenxi), [@mx-space](https://github.com/mx-space)
 
 ## 主题特色
 
