@@ -1,7 +1,5 @@
 ## Mix `Double space mixture`
 
-
-
 ![3A885E7D48BB9DFA285D9003C3C7AFD9](https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210217163055.jpg)
 
 > `小茶猫`制作版：https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/F9FFC0F62951EC122684B296113CAAF1.jpg
@@ -12,8 +10,8 @@
 
 ## 关于主题
 
-- 最新版本：1.5.0
-- [![wakatime](https://wakatime.com/badge/github/wibus-wee/Mix.svg)](https://wakatime.com/badge/github/wibus-wee/Mix)
+- 最新版本：1.5.0 [![wakatime](https://wakatime.com/badge/github/wibus-wee/Mix-Message.svg)](https://wakatime.com/badge/github/wibus-wee/Mix-Message)
+- 鸣谢：[@QingChiXiaoYe](https://github.com/QingChiXiaoYe), [@Musenxi](https://github.com/Musenxi), [@mx-space](https://github.com/mx-space)
 
 ## 主题特色
 
