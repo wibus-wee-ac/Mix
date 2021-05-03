@@ -31,6 +31,53 @@ function thumb($cid, $site_Url) {
     }
 
 
+function parse_RSS($url, $site)
+{
+    $rss = simplexml_load_file($url);
+    $file = $rss->channel->item;
+    $link = $rss->channel->link;
+    global $body;
+
+    if (isset($file)) {
+        // $rand_arr = get_randoms(0, 14, 5);
+        for ($i = 0; $i < 4; $i++) {
+            if ($file[$i]) {
+                // $body .= '
+                // <div class="col-6 col-m-3">' . '<a href="' . $file[$i]->link . '" class="news-article" target="_blank">' . '<img src="' . $site . '/src/img/' . array_pop($rand_arr) . '.jpg">' . '<h4>' . $file[$i]->title . '</h4></a></div>
+                // ';
+                $rand_num = 23; //随机图片数量，根据图片目录中图片实际数量设置
+                $img = $GLOBALS['assetURL'].'img/'.rand(1,$rand_num).'.png';
+                $body .= '
+                <div class="col-6 col-m-3">' . '<a class="SectionNews_news-article__3ttyR" href="' . $file[$i]->link . '" target="_blank" rel="noopener">
+                      <div class="SectionNews_card-container__1nays">
+                        <div class="SectionNews_card-cover-wrap__1DHPb">
+                          <div>
+                            <div style="position: relative; max-width: 100%; margin: auto;">
+                              <div class="lazyload-image"><img src="'.$img.'" alt="photo"></div>
+                              <div class="placeholder-image hide" style="max-width: 100%; position: absolute; filter: brightness(1.3); z-index: -1;">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="SectionNews_card-header__2M67p"></div>
+                        <div class="SectionNews_card-body__1Tj-4">
+                          <div class="SectionNews_text-mask__21UEm"><span>' . $file[$i]->title . '</span></div>
+                        </div>
+                        <div class="SectionNews_text-shade__QzdgY"></div>
+                      </div>
+                    </a>
+                  </div>
+                ';
+            } else {
+                break;
+            }
+        }
+    } else {
+        echo "博客连接失败啦，一请检查是否开启 OpenSSL 支持，二请检查地址是否正确。";
+        echo "使用 AppNode 或者 其他面板 的小伙伴请注意，请把网站的PHP设置 `allow_url_fopen = On`";
+    }
+    return $body;
+}
 /**
  * 实时人数显示
  */

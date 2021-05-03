@@ -1,4 +1,8 @@
-<div class="loader"><svg height="200px" viewBox="0 0 200 200" version="1.1">
+<div class="loader">
+<?if($HeadNavPhoto):?>
+<?$this->options->HeadNavPhoto()?>
+<?else:?>
+<svg height="200px" viewBox="0 0 200 200" version="1.1">
         <desc>Created with Sketch.</desc>
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g id="forest" fill="currentColor" fill-rule="nonzero">
@@ -13,5 +17,7 @@
                     id="Path"></path>
             </g>
         </g>
-    </svg></div>
+    </svg>
+<?endif;?>
+    </div>
     
