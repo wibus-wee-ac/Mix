@@ -50,7 +50,7 @@
   <?php $this->header(); ?>
   <script>
     window.MIX_CONFIG = {
-      VERSION: '1.5.0',
+      VERSION: '1.5.3',
       <?php if ($this->options->sideBarStyle == 1):?>
       SIDEBAR: 1,
       <?php elseif ($this->options->sideBarStyle == 2):?>

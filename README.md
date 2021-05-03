@@ -10,7 +10,7 @@
 
 ## 关于主题
 
-- 最新版本：1.5.0 [![wakatime](https://wakatime.com/badge/github/wibus-wee/Mix-Message.svg)](https://wakatime.com/badge/github/wibus-wee/Mix-Message)
+- 最新版本：1.5.3 [![wakatime](https://wakatime.com/badge/github/wibus-wee/Mix-Message.svg)](https://wakatime.com/badge/github/wibus-wee/Mix-Message)
 - 鸣谢：[@QingChiXiaoYe](https://github.com/QingChiXiaoYe), [@Musenxi](https://github.com/Musenxi), [@mx-space](https://github.com/mx-space)
 
 ## 主题特色
