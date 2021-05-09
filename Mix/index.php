@@ -36,6 +36,7 @@ if ($this->options->sideBarStyle == 2) {$this->need('component/sidebar.php');}
 <?php if($this->options->showIndexStyle == 1): 
     debug('小卡片样式');
     ?>
+<?php if($this->options->RSS):?>
 <section
     class="paul-news"
     style="min-height:34rem; animation: <?php $this->options->IndexAction(); ?>;">
@@ -87,7 +88,7 @@ if ($this->options->sideBarStyle == 2) {$this->need('component/sidebar.php');}
                 </div>
             </div>
         </div>
-
+<? endif; ?>
 
 <!--显示所有分类&文章-->
 <?php $this->need('component/index/card/cate-article.php'); ?>
