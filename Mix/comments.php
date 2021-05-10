@@ -29,7 +29,7 @@ function threadedComments($comments, $options)
   ?>">
     <div id="<?php $comments->theId(); ?>">
       <div class="comments-body">
-      <?php $avatar = 'https://cdn.v2ex.com/gravatar/' . md5(strtolower($comments->mail)) . '?s=80&r=X&d='; ?>
+      <?php $avatar = 'https://gravatar.loli.net/avatar/' . md5(strtolower($comments->mail)) . '?d=wavatar'; ?>
         <img class="avatar" src="<?php echo $avatar ?>" alt="<?php echo $comments->author; ?>"/>
         <div class="line"></div>
         <div class="comment_main">
