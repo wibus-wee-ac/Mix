@@ -37,19 +37,19 @@ if(window.MIX_CONFIG.SIDEBAR == 1){
     document.getElementById("btn_sidebar").onclick = function(){
         if(document.getElementById("headerr").className == 'Header_drawer__iQn1p global-drawer'){
             document.getElementById('headerr').className = 'Header_drawer__iQn1p global-drawer Header_show__3R4Sq global-show';
-            document.getElementById("overlay").className = 'display_yes';
+            // document.getElementById("overlay").className = 'display_yes';
         }
     }
     document.getElementById("close").onclick = function(){
         if(document.getElementById("headerr").className == 'Header_drawer__iQn1p global-drawer Header_show__3R4Sq global-show'){
             document.getElementById('headerr').className = 'Header_drawer__iQn1p global-drawer';
-            document.getElementById("overlay").className = 'display_yes display_none';
+            // document.getElementById("overlay").className = 'display_yes display_none';
         }
     }
     document.getElementById("headerr").onclick = function(){
         if(document.getElementById("headerr").className == 'Header_drawer__iQn1p global-drawer Header_show__3R4Sq global-show'){
             document.getElementById('headerr').className = 'Header_drawer__iQn1p global-drawer';
-            document.getElementById("overlay").className = 'display_yes display_none'
+            // document.getElementById("overlay").className = 'display_yes display_none'
         }
     }
 }
