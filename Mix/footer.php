@@ -27,7 +27,7 @@
             </div>
             <div class="col-m-6 right to-center">
               <p>
-              <a href="/feed" target="_blank rel="noopener"">RSS 订阅</a>·<a href="https://travellings.now.sh/" target="_blank" rel="noreferrer">开往</a></p>
+              <a href="/feed" target="_blank rel="noopener"">RSS 订阅</a>·<a href="https://travellings.link/" target="_blank" rel="noreferrer">开往</a></p>
               <p><?php echo online_users() ?>个小伙伴正在浏览&nbsp;&nbsp;<?php $this->options->RightHTML(); ?></p>
             </div>
           </div>

@@ -9,7 +9,7 @@
 function themeConfig($form) {
 
     Backup::echoBackup();
-    // Backup::update('1.5.7');
+    // Backup::update('1.5.8');
     $form->addItem(new CustomLabel('<div class="mdui-panel" mdui-panel="">'));
     $form->addItem(new Title('外观设置','图标设置,背景设置'));
      //GitHub图标设置

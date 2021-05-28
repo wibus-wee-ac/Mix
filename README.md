@@ -10,7 +10,7 @@
 
 ## 关于主题
 
-- 最新版本：1.5.7 [![wakatime](https://wakatime.com/badge/github/wibus-wee/Mix-Message.svg)](https://wakatime.com/badge/github/wibus-wee/Mix-Message)
+- 最新版本：1.5.8 [![wakatime](https://wakatime.com/badge/github/wibus-wee/Mix-Message.svg)](https://wakatime.com/badge/github/wibus-wee/Mix-Message)
 - 鸣谢：[@QingChiXiaoYe](https://github.com/QingChiXiaoYe), [@Musenxi](https://github.com/Musenxi), [@mx-space](https://github.com/mx-space)
 - [![DeepScan grade](https://deepscan.io/api/teams/14175/projects/17272/branches/390527/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=14175&pid=17272&bid=390527)
 

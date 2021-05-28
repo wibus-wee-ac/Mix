@@ -4,7 +4,7 @@
  * 
  * @package Mix
  * @author Wibus
- * @version 1.5.7
+ * @version 1.5.8
  * @link https://blog.iucky.cn
  */
 
