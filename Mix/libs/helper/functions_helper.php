@@ -83,8 +83,11 @@ function parse_RSS($url, $site)
  */
 //在线人数
 function online_users() {
-    $theme = constant(__TYPECHO_THEME_DIR__);
-    $filename= $theme.'/Mix/online.txt'; //数据文件
+    // $theme = constant(__TYPECHO_THEME_DIR__);
+    // $filename= $theme.'/Mix/online.txt'; //数据文件
+    $filename='/usr/themes/Mix/online.txt';
+    // TODO：需要解决constant无法找到的问题，但是似乎有些人魔改了Typecho导致无法获取真正的相对地址
+    // 以及某些博客托管会导致根目录无法创建文件，用户也无法创建
     $cookiename='Mix_OnLineCount'; //Cookie名称
     $onlinetime=30; //在线有效时间
     $online=file($filename); 
