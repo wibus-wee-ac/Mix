@@ -83,8 +83,9 @@ function parse_RSS($url, $site)
  */
 //在线人数
 function online_users() {
-    $filename='online.txt'; //数据文件
-    $cookiename='Nanlon_OnLineCount'; //Cookie名称
+    $theme = constant(__TYPECHO_THEME_DIR__);
+    $filename= .$theme'/Mix/online.txt'; //数据文件
+    $cookiename='Mix_OnLineCount'; //Cookie名称
     $onlinetime=30; //在线有效时间
     $online=file($filename); 
     $nowtime=$_SERVER['REQUEST_TIME']; 
