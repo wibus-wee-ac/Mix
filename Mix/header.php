@@ -56,7 +56,6 @@
       <?php elseif ($this->options->sideBarStyle == 2):?>
       SIDEBAR: 2,
       <?php endif;?>
-      // PJAX_DONE: <?php $this->options->PjaxReLoad; ?>
     }
   </script>
   </head>
