@@ -2,21 +2,16 @@
 
 ![3A885E7D48BB9DFA285D9003C3C7AFD9](https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210217163055.jpg)
 
-> `小茶猫`制作版：https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/F9FFC0F62951EC122684B296113CAAF1.jpg
->
-> `レモン柠檬`制作版：https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210217163055.jpg
-
-[Mix的开发日志](https://iucky.cn/posts/things/how-to-develop-mix-typecho)
-
 ## 关于主题
 
 - 最新版本：1.5.8 [![wakatime](https://wakatime.com/badge/github/wibus-wee/Mix-Message.svg)](https://wakatime.com/badge/github/wibus-wee/Mix-Message)
 - 鸣谢：[@QingChiXiaoYe](https://github.com/QingChiXiaoYe), [@Musenxi](https://github.com/Musenxi), [@mx-space](https://github.com/mx-space)
 - [![DeepScan grade](https://deepscan.io/api/teams/14175/projects/17272/branches/390527/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=14175&pid=17272&bid=390527)
+- Demo（可能随时挂掉嘤嘤嘤）: https://blog.iucky.cn
 
 ## 主题特色
 
-短代码`全部`适配`handsome`主题
+短代码`基本全部`适配`handsome`主题
 
 文章内页两种样式选择
 
