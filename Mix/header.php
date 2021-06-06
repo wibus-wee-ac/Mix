@@ -24,9 +24,9 @@
   <style><?php $this->options->CSS(); ?></style>
   <?php if($this->options->BackGroundImage):?>
   <style>
-  body, nav#Header_head-menu__ofiV5 {
+  /* body, nav#Header_head-menu__ofiV5 {
     background: url(<?php $this->options->BackGroundImage() ?>) top fixed!important;
-  }
+  } */
   @media all and (max-width:600px){
     nav#Header_head-menu__ofiV5 {
       background: url(<?php $this->options->BackGroundImage() ?>) top fixed!important;
@@ -37,9 +37,9 @@
   <?php endif;?>
   <?php if($this->options->BackGroundImageDark):?>
   <style>
-  html.dark body, html.dark nav#Header_head-menu__ofiV5 {
+  /* html.dark body, html.dark nav#Header_head-menu__ofiV5 {
     background: url(<?php $this->options->BackGroundImageDark() ?>) top fixed!important;
-  }
+  } */
   @media all and (max-width:600px){
     html.dark nav#Header_head-menu__ofiV5 {
       background: url(<?php $this->options->BackGroundImageDark() ?>) top fixed!important;
