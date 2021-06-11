@@ -106,6 +106,7 @@ function themeConfig($form) {
         // 'ShowArticle' => _t('文章'),
         // 'ShowDairy' => _t('日记'),
         'ShowMore' => _t('了解更多（仅1.0）'),
+        'ShowAly' => _t('在线人数统计（当底部出现报错时请先对全部目录设置777权限再考虑关闭！）')
         ),
         array('ShowHeadSVG'),_t('启动的部件'),_t('部件启动选项'));  
         $form->addInput($Show_what_1->multiMode());

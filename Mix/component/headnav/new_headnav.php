@@ -135,7 +135,7 @@
                           foreach ($itemSub as $subItem){
                               $subListHtml .= Content::returnHeadItem($subItem,false,"" ,'yes');
                           }
-                          $subListHtml .= '</div>';
+                          // $subListHtml .= '</div>';
                       }
 
                       $headnavItemsOutput .= Content::returnHeadItem($headnavItem,$haveSub,$subListHtml);

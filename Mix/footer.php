@@ -28,7 +28,9 @@
             <div class="col-m-6 right to-center">
               <p>
               <a href="/feed" target="_blank rel="noopener"">RSS 订阅</a>·<a href="https://travellings.link/" target="_blank" rel="noreferrer">开往</a></p>
-              <!-- <p><?php echo online_users() ?>个小伙伴正在浏览&nbsp;&nbsp;<?php $this->options->RightHTML(); ?></p> -->
+              <?php if (!empty($this->options->Show_what_1) && in_array('ShowAly', $this->options->Show_what_1)):?>
+              <p><?php echo online_users() ?>个小伙伴正在浏览&nbsp;&nbsp;<?php $this->options->RightHTML(); ?></p>
+              <? endif; ?>
             </div>
           </div>
         </div>
