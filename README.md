@@ -1,5 +1,3 @@
-# 各位请注意！QQ群与本人无关！若您进入了一个名为Typecho-Mix群并出现了利益受损，请不要找我！
-
 ## Mix `Double space mixture`
 
 ![3A885E7D48BB9DFA285D9003C3C7AFD9](https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/20210217163055.jpg)
