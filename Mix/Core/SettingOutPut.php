@@ -25,6 +25,6 @@ if (preg_match("/options-theme.php/", $_SERVER['REQUEST_URI'])) {
     }
     $hosturl = $_SERVER['HTTP_HOST'];
     $check_host = 'https://api.iucky.cn/plugins/update/Mix.php';
-    $check_message = $check_host . '?a=V1.5.8&u=' . $_SERVER['HTTP_HOST'];
+    $check_message = $check_host . '?a=V2.0.0&u=' . $_SERVER['HTTP_HOST'];
     $message_json = file_get_contents($check_message);
 }
